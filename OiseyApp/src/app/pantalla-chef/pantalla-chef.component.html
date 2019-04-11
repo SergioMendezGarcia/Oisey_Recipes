@@ -9,14 +9,14 @@
     <textarea name="" id="" cols="30" rows="10">{{xef.biografia}}</textarea>
     <div *ngFor='let foto of xef.galeria' id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
+        <div  class="carousel-item active">
+          <img [src]="['xef.galeria[0]']" class="d-block w-100" alt="">
+        </div>
+        <div  class="carousel-item">
+          <img [src]="['xef.galeria[1]']" class="d-block w-100" alt="">
         </div>
         <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
+          <img [src]="['xef.galeria[2]']" class="d-block w-100" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
