@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { PieComponent } from './pie/pie.component';
 import { PantallaChefComponent } from './pantalla-chef/pantalla-chef.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-import { ComentariosChefComponent } from './pantallaChef/comentarios-chef/comentarios-chef.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PieComponent,
     PantallaChefComponent,
-    CabeceraComponent,
-    ComentariosChefComponent
+    CabeceraComponent
   ],
   imports: [
     BrowserModule,

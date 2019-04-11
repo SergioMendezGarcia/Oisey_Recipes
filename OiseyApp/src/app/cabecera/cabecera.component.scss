@@ -1,93 +1,101 @@
-/*Nav*/
-
-.oisey{
-    background-color: #00E7FF;
-    color: #fff;
-}
-
-/*Icon burger*/
-
-.animated-icon3 {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    margin: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
+* {
+    box-sizing:border-box;
+  }
+  a {
+    text-decoration:none;
+  }
+  
+  /*Damos estilos al menú*/
+  
+  header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #00E7FF;
+      text-align: center;
+  }
+  
+  header img{
+      margin: 1.5%;
+      width: 7%;
+  }
+  .nav {
+    position:fixed;
+    width:200px;
+    height:100vh;
+    top:0;
+    left:-220px; /*Ocultamos el menú en la parte izquierda para que no se vea a menos que pulsemos sobre la hamburguesa*/
+    padding-top:6vh;
+    background-color: #0066ff;
+    border-right:4px solid #0063cf;
+    transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
+  }
+     /*Estilos de los li del menú*/
+     .nav__item {
+       display:block;
+       width:96%;
+       margin:0 auto;
+       line-height:2;
+       position:relative; /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
+       border-bottom:.5px solid #0000ff;
+       background-color:transparent;
+       font-family: 'Lato', sans-serif;
+       text-align:center;
+       color:rgba(221, 231, 228, 1);
+     }
+         /*colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
+         .current:before {
+            content:"";
+            width:0;
+            height:0;
+            position:absolute; /*Le damos al before una posición absoluta relativa al li que lo contiene*/
+            border-top:17px solid transparent;
+            border-left:15px solid #003399;
+            border-bottom:17px solid transparent;
+            top:0px;
+            right:-15px; /*Lo posicionamos -15px a la derecha de su contenedor*/
+            z-index:4; /*le otorgamos un z-index alto para que se posicione arriba de otros elementos*/
+         }
+        /*Colocamos el borde verde al triangulo por medio de otro trangulo verde*/
+        .current:after {
+            content:"";
+            width:0;
+            height:0;
+            position:absolute;/*Le damos al after una posición absoluta relativa al li que lo contiene*/
+            border-top:16.5px solid transparent;
+            border-left:17px solid #0063cf;
+            border-bottom:17px solid transparent;
+            top:.5px;
+            right:-21px;
+            z-index:1;  /*le otorgamos un z-index bajo para que se posicione debajo del trinagulo negro*/
+        }
+    /*Estos son los estilos de la hamburguesa del menú que abre y cierra el mismo*/
+    .menu-toogle {
+      position:fixed; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+      width: 35px;
+      line-height:1.1;
+      text-align:center;
+      top:6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+      left: 8px; 
+      border-radius:3px;
+      transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
+      z-index:10;
     }
+      /*Añadimos la haburguesa y le damos unos estilos*/
+      .menu-toogle::before {
+        content:"☰";
+        font-size:calc(32px + 1.1vw);
+        color:#FFF;
+      }
+  
+      /*Estos son los estilos que le dan la funcionalidad al menú*/
+      /*El checkbox según esté activado o no hará que el menú aparezca o desaparezca*/
+      .checkbox {
+        display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+      }
+      .checkbox:checked ~ .nav {
+        left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+        position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+      }
     
-    .animated-icon3 span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-    }
-    
-    .animated-icon3 span {
-    background: #ffff;
-    }
-    
-    .animated-icon3 span:nth-child(1) {
-    top: 0px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-    }
-    
-    .animated-icon3 span:nth-child(2) {
-    top: 10px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-    }
-    
-    .animated-icon3 span:nth-child(3) {
-    top: 20px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-    }
-    
-    .animated-icon3.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 0px;
-    left: 8px;
-    }
-    
-    .animated-icon3.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-    }
-    
-    .animated-icon3.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 21px;
-    left: 8px;
-    }
