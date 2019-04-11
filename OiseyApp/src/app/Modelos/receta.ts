@@ -1,4 +1,4 @@
-export class Recetas {
+export class Receta {
 
     constructor(public rid:number, 
         public nombre:string, 
