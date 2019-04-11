@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PieComponent } from './pie/pie.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PieComponent,
     CabeceraComponent
   ],
   imports: [
