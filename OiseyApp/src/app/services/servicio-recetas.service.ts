@@ -4,7 +4,7 @@ import { Receta } from '../Modelos/receta';
 @Injectable({
   providedIn: 'root'
 })
-export class ServicioRecetaService {
+export class ServicioRecetasService {
                                       //Array con datos mock para testeo
   private  _recetas = [
     new Receta(1, 'Huevos con patatas', 'Huevos, aceite, patatas', 25, ['huevos.jpg', 'patatas.jpg'], 5),

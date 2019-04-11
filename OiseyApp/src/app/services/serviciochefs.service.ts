@@ -11,6 +11,6 @@ export class chefs {
   constructor() { }
 
   getChefs(){
-    new Chefs(1, 'imagen', 'comida asiática', 3.5,'Ama de ca'
+    new Chefs(1, 'imagen', 'comida asiática', 3.5,'Ama de ca')
   }
 }
