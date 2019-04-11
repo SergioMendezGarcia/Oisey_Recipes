@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PantallaChefComponent } from './pantalla-chef/pantalla-chef.component';
+import { PedirRecetasComponent } from './pedir-recetas/pedir-recetas.component';
 
 const routes: Routes = [
 
-  {path: 'chefs/:cnombre', component: PantallaChefComponent, pathMatch: 'full'},
+  {path: 'chefs', component: PantallaChefComponent, pathMatch: 'full'},
+  {path: 'pedir', component: PedirRecetasComponent, pathMatch: 'full'},
+  {path: '', redirectTo: 'pedir', pathMatch:'full'}
 ];
 
 @NgModule({
