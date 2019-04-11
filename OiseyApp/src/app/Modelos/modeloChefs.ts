@@ -1,5 +1,6 @@
 export class Chefs {
-    constructor(public id: number, 
+    constructor(public id: number,
+        public nombre: string, 
         public avatar: string, 
         public especialidad: string, 
         public estrellas: number, 
