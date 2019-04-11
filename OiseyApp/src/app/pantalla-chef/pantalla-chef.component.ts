@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-pantalla-chef',
   templateUrl: './pantalla-chef.component.html',
@@ -10,6 +11,8 @@ export class PantallaChefComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
+
 
 }
