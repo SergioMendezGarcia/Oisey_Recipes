@@ -1,29 +1,29 @@
+<article>
 
+  <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
+  <h2>{{chefs[0].nombre}}</h2>
+  <h3>{{chefs[0].especialidad}}</h3>
   <div>
-    <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
-    <h2>{{chefs[0].nombre}}</h2>
-    <h3>{{chefs[0].especialidad}}</h3>
-    <div>
-      <p>{{chefs[0].estrellas}}</p>
-    </div>
-    <article>{{chefs[0].biografia}}</article>
-    <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img [src]="chefs[0].galeria[0]" class="d-block w-100" alt="">
-        </div>
-        <div *ngFor='let aImgChef of chefs[0].galeria'  class="carousel-item">
-          <img [src]="aImgChef" class="d-block w-100" alt="">
-        </div>
+    <p>{{chefs[0].estrellas}}</p>
+  </div>
+  <article>{{chefs[0].biografia}}</article>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="chefs[0].galeria[0]" class="d-block w-100" alt="">
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div *ngFor='let aImgChef of chefs[0].galeria' class="carousel-item">
+        <img [src]="aImgChef" class="d-block w-100" alt="">
+      </div>
     </div>
-    <comentarios-chef></comentarios-chef>
-    
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <comentarios-chef></comentarios-chef>
+</article>
