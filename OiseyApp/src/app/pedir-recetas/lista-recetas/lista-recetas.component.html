@@ -1,11 +1,11 @@
 <select>
     <option value="">Nombre</option>
-    <option value="">Cercania</option>
+    <option value="">Cercanía</option>
     <option value="">Tiempo</option>
     <option value="">Estrellas</option>
   </select>
   <div>
     <ul>
-      <li ngFor="let i of recetas"><span>{{i.foto[0]}}</span><span>{{i.nombre}}</span><span>{{i.tiempo}}</span><span>{{i.raiting}}</span></li>
+      <li *ngFor="let i of recetas"><span>{{i.fotos[0]}}</span><span>{{i.nombre}}</span><span>{{i.tiempo}}</span><span>{{i.rating}}</span></li>
     </ul>
   </div>

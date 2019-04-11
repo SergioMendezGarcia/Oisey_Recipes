@@ -12,6 +12,7 @@ export class ListaRecetasComponent implements OnInit {
   recetas = null;
   ngOnInit() {
     this.recetas = this._recetas.getRecetas();
+    console.log(this.recetas[0].fotos[0])
   }
 
 }
