@@ -1,23 +1,22 @@
-<article *ngFor='let xef of chefs'>
+
   <div>
-    <figure><img [src]="['xef.avatar']" alt=""></figure>
-    <h2>{{xef.nombre}}</h2>
-    <h3>{{xef.especialidad}}</h3>
+    <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
+    <h2>{{chefs[0].nombre}}</h2>
+    <h3>{{chefs[0].especialidad}}</h3>
     <div>
-      <p>{{xef.estrellas}}</p>
+      <p>{{chefs[0].estrellas}}</p>
     </div>
-    <textarea name="" id="" cols="30" rows="10">{{xef.biografia}}</textarea>
-    <div *ngFor='let foto of xef.galeria' id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+    <article>{{chefs[0].biografia}}</article>
+    <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <div  class="carousel-item active">
-          <img [src]="['xef.galeria[0]']" class="d-block w-100" alt="">
+        <div class="carousel-item active">
+          <img [src]="chefs[0].galeria[0]" class="d-block w-100" alt="">
         </div>
-        <div  class="carousel-item">
-          <img [src]="['xef.galeria[1]']" class="d-block w-100" alt="">
+        <div *ngFor='let aImgChef of chefs[0].galeria'  class="carousel-item">
+          <img [src]="aImgChef" class="d-block w-100" alt="">
         </div>
-        <div class="carousel-item">
-          <img [src]="['xef.galeria[2]']" class="d-block w-100" alt="...">
-        </div>
+        
+      
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -27,5 +26,5 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
-<!-- </article> -->
+    </div> -->
+    
