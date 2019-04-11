@@ -3,7 +3,9 @@ footer{
     >div:first-of-type{
         text-align: center;
         img{
-            width: 5%;
+            width: 2.5%;
+            min-width: 32px;
+            min-height: 40px;
         }
     }
     >div:last-of-type{
