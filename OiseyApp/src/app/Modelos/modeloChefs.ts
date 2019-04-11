@@ -1,4 +1,4 @@
-export class Chefs {
+export class Chef {
     constructor(public id: number,
         public nombre: string, 
         public avatar: string, 
