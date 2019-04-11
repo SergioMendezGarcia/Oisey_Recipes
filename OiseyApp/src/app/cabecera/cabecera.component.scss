@@ -8,9 +8,6 @@
   /*Damos estilos al menú*/
   
   header{
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       background-color: #00E7FF;
       text-align: center;
@@ -23,28 +20,28 @@
   .nav {
     position:fixed;
     width:200px;
-    height:100vh;
+    padding-top:8vh;
     top:0;
     left:-220px; /*Ocultamos el menú en la parte izquierda para que no se vea a menos que pulsemos sobre la hamburguesa*/
-    padding-top:6vh;
     background-color: #0066ff;
     border-right:4px solid #0063cf;
     transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
+    padding-bottom: 100vh;
   }
      /*Estilos de los li del menú*/
      .nav__item {
-       display:block;
        width:96%;
-       margin:0 auto;
        line-height:2;
+       margin: 0 auto;
        position:relative; /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
        border-bottom:.5px solid #0000ff;
        background-color:transparent;
        font-family: 'Lato', sans-serif;
        text-align:center;
        color:rgba(221, 231, 228, 1);
-     }
-         /*colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
+    }
+
+      /*colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
          .current:before {
             content:"";
             width:0;
@@ -76,8 +73,8 @@
       width: 35px;
       line-height:1.1;
       text-align:center;
-      top:6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
-      left: 8px; 
+      top:16.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+      left: 28px; 
       border-radius:3px;
       transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
       z-index:10;
