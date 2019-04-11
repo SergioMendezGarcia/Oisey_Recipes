@@ -6,4 +6,15 @@ footer{
             width: 10%;
         }
     }
+    >div:last-of-type{
+        text-align: center;
+        color: #fff;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #999;
+    }
 }
