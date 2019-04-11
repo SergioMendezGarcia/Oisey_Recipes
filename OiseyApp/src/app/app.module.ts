@@ -6,8 +6,11 @@ import { AppComponent } from './app.component';
 import { PieComponent } from './pie/pie.component';
 import { PantallaChefComponent } from './pantalla-chef/pantalla-chef.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-import { ComentariosChefComponent } from './pantalla-chef/comentarios-chef/comentarios-chef.component';
 
+import { PedirRecetasComponent } from './pedir-recetas/pedir-recetas.component';
+import { ListaRecetasComponent } from './pedir-recetas/lista-recetas/lista-recetas.component';
+import { MapaComponent } from './pedir-recetas/mapa/mapa.component';
+import { ComentariosChefComponent } from './pantalla-chef/comentarios-chef/comentarios-chef.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,11 @@ import { ComentariosChefComponent } from './pantalla-chef/comentarios-chef/comen
     PieComponent,
     PantallaChefComponent,
     CabeceraComponent,
+    PedirRecetasComponent,
+    ListaRecetasComponent,
+    MapaComponent,
+    CabeceraComponent,
     ComentariosChefComponent
-    
   ],
   imports: [
     BrowserModule,
