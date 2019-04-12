@@ -21,7 +21,7 @@ export class ServicioRecetasService {
 
                                     //Método para filtar recetas
   
-  filterRecetas(nombre){ };
+  // filterRecetas(nombre){ };
 
   constructor() { }
 }
