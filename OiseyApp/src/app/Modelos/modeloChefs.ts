@@ -7,7 +7,7 @@ export class Chef {
         public estrellas: number, 
         public biografia: string, 
         public galeria: string[], 
-        public localizacion: number[], 
+        public localizacion: object, 
         public ciudad: string,
         
         public comentarios: number[]){};
