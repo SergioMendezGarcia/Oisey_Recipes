@@ -1,6 +1,16 @@
 <h3>Comentarios</h3>
 <section>
   <article *ngFor="let aChefComment of listaComments">
-    {{aChefComment.titulo}}
+    <figure>
+      <img src="{{aChefComment.fotoUsuario}}" alt="{{aChefComment.nombreUsuario}}">
+      <caption>{{aChefComment.nombreUsuario}}</caption>
+    </figure>
+    <h5>{{aChefComment.titulo}}</h5>
+    <div>
+        {{aChefComment.comentario}}
+    </div>
+    <span>{{aChefComment.fecha}}</span>
+    <br />
+    <span>{{aChefComment.puntuacion}}</span>
   </article>
 </section>

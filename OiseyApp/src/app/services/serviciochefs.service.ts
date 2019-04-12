@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Chef } from '../Modelos/modeloChefs';
-import { ComentarioChef } from '../Modelos/comentario-chef';
 
 @Injectable({
   providedIn: 'root'
