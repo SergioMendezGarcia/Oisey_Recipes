@@ -39,12 +39,17 @@ article:first-of-type{
           overflow: hidden;
           img{height: 50vh;}
         }
+
+        span{
+            background-color: #000;
+            border-radius: 15px;
+        }
         > div img{
             object-fit: contain;
             width: 100%;
         }
 
-        
+
 
 }
 
