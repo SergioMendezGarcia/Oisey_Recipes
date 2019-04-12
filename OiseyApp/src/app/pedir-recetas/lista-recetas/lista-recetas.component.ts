@@ -30,7 +30,7 @@ export class ListaRecetasComponent implements OnInit {
     if (this.fc == "tiempo") {
       return this.recetas.sort(function(recA,recB){
         if(recA.tiempo>recB.tiempo) return 1;
-        else return - 1;
+        else return -1;
       });
     }
   }
