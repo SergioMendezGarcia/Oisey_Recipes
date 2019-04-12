@@ -1,5 +1,6 @@
 export class Chef {
-    constructor(public id: number,
+    constructor(
+        public chefId: number,
         public nombre: string, 
         public avatar: string, 
         public especialidad: string, 
@@ -8,6 +9,7 @@ export class Chef {
         public galeria: string[], 
         public localizacion: number[], 
         public ciudad: string,
-        public comentarios: string[]){}
+        
+        public comentarios: number[]){};
 
 }
