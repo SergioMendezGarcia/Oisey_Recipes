@@ -13,7 +13,7 @@ export class serviciochefs {
       'comida asiática',
       3.5,
       'Amo de casa con ganas de cocinar',
-      ['https://c.wallhere.com/photos/c0/f7/salad_leaves_sauce-555875.jpg!d', 'https://d1bvpoagx8hqbg.cloudfront.net/originals/dia-comida-asiatica-695df695b57836ba4d9dc4b19b1e4fef.jpg', 'https://c.pxhere.com/photos/35/ff/chicken_rice_food_asian_chicken_cuisine_sauce_chilli-816233.jpg!d', 'https://c.pxhere.com/photos/3c/ce/korean_food_korean_dish_dish_food_meal_vegetables_vegetable_meal_fried_vegetables-483166.jpg!d'],
+      ['https://bit.ly/2P3kF5x', 'https://d1bvpoagx8hqbg.cloudfront.net/originals/dia-comida-asiatica-695df695b57836ba4d9dc4b19b1e4fef.jpg', 'https://c.pxhere.com/photos/35/ff/chicken_rice_food_asian_chicken_cuisine_sauce_chilli-816233.jpg!d', 'https://c.pxhere.com/photos/3c/ce/korean_food_korean_dish_dish_food_meal_vegetables_vegetable_meal_fried_vegetables-483166.jpg!d'],
       [385, 192.3],
       'Barcelona',
       [0, 1]),
