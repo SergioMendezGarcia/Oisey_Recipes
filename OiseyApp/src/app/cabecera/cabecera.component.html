@@ -2,10 +2,9 @@
     <input type="checkbox" class="checkbox" id="menu-toogle"/>
       <label for="menu-toogle" class="menu-toogle"></label>
       <nav class="nav">
-        <a href="#" class="nav__item">Main</a>
-        <a href="#" class="nav__item">Chefs</a>
-        <a href="#" class="nav__item current">Recetas</a>
-        <a href="#" class="nav__item">Mapa</a>
+        <a href="#" class="nav__item">Login</a>
+        <a [href]="['/pedir']" class="nav__item current">Haz tu pedido</a>
+        <a [href]="['/chefs']" class="nav__item">Chefs</a>
         <a href="#" class="nav__item">Soporte</a>
       </nav>
     <img src="../assets/img/ORfooter.png">
