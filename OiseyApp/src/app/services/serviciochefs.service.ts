@@ -11,7 +11,7 @@ export class serviciochefs {
       'Josetxo',
       'https://bit.ly/2UfpgT9',
       'comida asiática',
-      0.5,
+      2.5,
       'Amo de casa con ganas de cocinar',
       ['https://bit.ly/2P3kF5x', 'https://bit.ly/2VHxHIu', 'https://bit.ly/2De2DsC', 'https://bit.ly/2VGrcp2'],
       [385, 192.3],
