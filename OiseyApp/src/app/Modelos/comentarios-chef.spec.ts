@@ -1,4 +1,4 @@
-import { ComentariosChef } from './comentarios-chef';
+import { ComentariosChef } from './comentario-chef';
 
 describe('ComentariosChef', () => {
   it('should create an instance', () => {
