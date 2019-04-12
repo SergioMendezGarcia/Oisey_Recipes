@@ -73,8 +73,8 @@
       width: 35px;
       line-height:1.1;
       text-align:center;
-      top:16.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
-      left: 28px; 
+      top:9px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+      left: 14px; 
       border-radius:3px;
       transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
       z-index:10;
@@ -82,7 +82,7 @@
       /*Añadimos la haburguesa y le damos unos estilos*/
       .menu-toogle::before {
         content:"☰";
-        font-size:calc(32px + 1.1vw);
+        font-size:calc(22px + 1.1vw);
         color:#FFF;
       }
   
