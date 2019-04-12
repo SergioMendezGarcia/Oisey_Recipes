@@ -6,25 +6,33 @@ article:first-of-type{
     width: 85%;
     margin: auto;
     z-index: 0;
+    text-shadow: 0.3px 0.3px 2px black;
     // background-color: rgb(246, 244, 244);
     
     
         > figure >img{
-            border: 1px solid black;
+            // border: 3px dashed rgb(80, 80, 80);
             border-radius: 50%;
             width: 20%;
             min-width: 200px;
             object-fit: contain;
-            margin-top: 15px;
+            margin-top: 20px;
         
         }
         >h2{
            
             color: rgb(26, 26, 26);
+             font-size: calc(1.6vw + 20px);
         }
-        >h4{
+        > h4{
          
             color: rgb(163, 163, 163);
+            font-size: calc(1vw + 20px);
+        }
+        .estrellas{
+         
+            color: rgb(59, 59, 59);
+            font-size: calc(1vw + 10px);
         }
         > .descrip{
             display:inline-block;
@@ -33,6 +41,9 @@ article:first-of-type{
           width: 85%;
           height: 100px;
           margin-bottom: 15px;
+          text-shadow: 0.5px 0.5px 2px rgb(42, 42, 42);
+          color: rgb(78, 78, 78);
+        font-size: calc(0.5vw + 10px);
         }
 
         button{
@@ -42,6 +53,9 @@ article:first-of-type{
             padding: 10px;
             margin-bottom: 15px;
             color: #fff;
+        }
+        button:hover{
+           background-color: #003f69;  
         }
 
         .carousel-item{
@@ -59,6 +73,7 @@ article:first-of-type{
             object-fit: contain;
             width: 100%;
         }
+        
 
 
 
