@@ -1,19 +1,4 @@
-<h3>Comentarios</h3>
-<section>
-  <article *ngFor="let aChefComment of listaComments">
-    <figure>
-      <img src="{{aChefComment.fotoUsuario}}" alt="{{aChefComment.nombreUsuario}}">
-      <caption>{{aChefComment.nombreUsuario}}</caption>
-    </figure>
-    <h5>{{aChefComment.titulo}}</h5>
-    <div>
-        {{aChefComment.comentario}}
-    </div>
-    <span>{{aChefComment.fecha}}</span>
-    <br />
-    <span>{{aChefComment.puntuacion}}</span>
-  </article>
-</section>
+
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -27,7 +12,7 @@
           <a *ngFor="let aChefComment of listaComments" class="list-group-item">
                 <div class="media col-md-3">
                     <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive"  src="{{}}" alt="placehold.it/350x250" >
+                        <img class="media-object img-rounded img-responsive"  src="{{aChefComment.fotoUsuario}}" alt="{{a.ChefComment.nombreUsuario}} >
                     </figure>
                 </div>
                 <div class="col-md-6">
