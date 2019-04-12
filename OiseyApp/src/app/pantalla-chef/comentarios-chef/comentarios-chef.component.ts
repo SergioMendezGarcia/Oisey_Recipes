@@ -25,11 +25,9 @@ export class ComentariosChefComponent implements OnInit {
 
       this.listaChefs = this._chefServ.getChefs();
       const comentarios=this.listaChefs[parametros.chefId].comentarios;
-
-      console.log('Comentarios chef:',comentarios)
       
       this.listaComments = this._chefCommServ.getComments(comentarios);
-      console.log('Lista de comentarios : ', this.listaComments);
+
     })
   
   };
