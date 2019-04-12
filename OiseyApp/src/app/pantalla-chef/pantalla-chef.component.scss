@@ -6,7 +6,7 @@ article:first-of-type{
     width: 85%;
     margin: auto;
     z-index: 0;
-    text-shadow: 0.3px 0.3px 2px black;
+    // text-shadow: 0.3px 0.3px 2px black;
     // background-color: rgb(246, 244, 244);
     
     
@@ -22,16 +22,19 @@ article:first-of-type{
         >h2{
            
             color: rgb(26, 26, 26);
+            text-shadow: 0.3px 0.3px  black;
        
         }
         > h4{
          
             color: rgb(163, 163, 163);
+            text-shadow: none;
            
         }
         .estrellas{
          
             color: rgb(59, 59, 59);
+            
            
         }
         > .descrip{
@@ -41,7 +44,7 @@ article:first-of-type{
           width: 85%;
           height: 100px;
           margin-bottom: 15px;
-          text-shadow: 0.5px 0.5px 2px rgb(42, 42, 42);
+          
           color: rgb(78, 78, 78);
        
         }
@@ -55,7 +58,7 @@ article:first-of-type{
             color: #fff;
         }
         button:hover{
-           background-color: #003f69;  
+           background-color: #4577a0;  
         }
 
         .carousel-item{
