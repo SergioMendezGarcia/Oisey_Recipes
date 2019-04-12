@@ -13,7 +13,6 @@ article:first-of-type{
         > figure >img{
             border: 1px solid black;
             border-radius: 50%;
-            // overflow: hidden;
             width: 20%;
             min-width: 200px;
             object-fit: contain;
@@ -43,11 +42,9 @@ article:first-of-type{
         > div img{
             object-fit: contain;
             width: 100%;
-             
-        .carousel-control {
-        color: #bada55;
         }
-        }
+
+        
 
 }
 
