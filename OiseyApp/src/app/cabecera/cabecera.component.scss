@@ -73,8 +73,8 @@
       width: 35px;
       line-height:1.1;
       text-align:center;
-      top:16.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
-      left: 28px; 
+      top:9px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+      left: 14px; 
       border-radius:3px;
       transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
       z-index:10;
@@ -82,7 +82,7 @@
       /*Añadimos la haburguesa y le damos unos estilos*/
       .menu-toogle::before {
         content:"☰";
-        font-size:calc(32px + 1.1vw);
+        font-size:calc(22px + 1.1vw);
         color:#FFF;
       }
   
@@ -95,4 +95,30 @@
         left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
         position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
       }
+
+     /*searchbar*/
+
+     .searchbar input{
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+
+      .searchbar button{
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #0063cf;
+      }
+
+      .searchbar button img{
+        width: 15%;
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
     

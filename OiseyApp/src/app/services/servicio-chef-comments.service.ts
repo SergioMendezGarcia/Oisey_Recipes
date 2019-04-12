@@ -36,7 +36,7 @@ export class ServicioChefCommentsService {
   getComments(comentariosChefs){
                                   //Declaración variable en la que se almacenarán los comentarios
                                   //ya filtrados.
-    let comentarios:ComentarioChef;
+    let comentarios:ComentarioChef[];
                                   //Bucle for para filtrar los comentarios del chef deseado
                                   //usando el id asignado a cada comentario, presente tanto en
                                   //el objeto comentario como en el objeto chef.

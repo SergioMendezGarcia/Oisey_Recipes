@@ -1,16 +1,16 @@
 <select>
-    <option value="">Nombre</option>
-    <option value="">Cercanía</option>
-    <option value="">Tiempo</option>
-    <option value="">Estrellas</option>
-  </select>
-  <div>
-    <ul>
-      <li *ngFor="let i of recetas">
-        <span>{{i.fotos[0]}}</span>
-        <span>{{i.nombre}}</span>
-        <span>{{i.tiempo}}</span>
-        <span>{{i.rating}}</span>
-      </li>
-    </ul>
-  </div>
+  <option value="">Nombre</option>
+  <option value="">Cercania</option>
+  <option value="">Tiempo</option>
+  <option value="">Estrellas</option>
+</select>
+<div>
+  <ul class="container">
+    <li class="row" *ngFor="let i of recetas">
+      <span class="col-3"><img [src]="i.fotos[0]"></span>
+      <span class="col-5">{{i.nombre}}</span>
+      <span class="col-2">{{i.tiempo}}</span>
+      <span class="col-2">{{i.rating}}</span>
+    </li>
+  </ul>
+</div>
