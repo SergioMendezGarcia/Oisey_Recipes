@@ -14,7 +14,7 @@ export class ComentariosChefComponent implements OnInit {
 
   ngOnInit() {
 
-    this.listaChefs = this._chefServ.getChef();
+    this.listaChefs = this._chefServ.getChefs();
    
   }
 
