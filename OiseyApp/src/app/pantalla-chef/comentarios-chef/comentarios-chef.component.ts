@@ -20,13 +20,14 @@ export class ComentariosChefComponent implements OnInit {
 
   ngOnInit() {
 
-   
     // this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
     this._route.params.subscribe(parametros=>{
+
       this.listaChefs = this._chefServ.getChefs();
-      console.log('Parámetros: ', parametros.chefId);
-      this.listaComments = this._chefCommServ.getComments(this.listaChefs[parametros.chefId].comentarios);
-      console.log('Lista de comentarios : ', this.listaChefs[parametros.chefId].comentarios);
+      const comentarios=this.listaChefs[parametros.chefId].comentarios;
+      
+      this.listaComments = this._chefCommServ.getComments(comentarios);
+
     })
   
   };
