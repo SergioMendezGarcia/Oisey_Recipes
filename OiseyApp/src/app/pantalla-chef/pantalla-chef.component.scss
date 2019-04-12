@@ -39,13 +39,14 @@ article:first-of-type{
         }
         > .descrip{
             display:inline-block;
-          border: dashed 4px rgba(93, 190, 228, 0.74);
+          border: thin 3px rgba(170, 170, 170, 0.74);
         //   box-shadow: 1px 1px 4px rgb(68, 68, 68) inset;
           width: 85%;
           height: 100px;
           margin-bottom: 15px;
-          
+          font-style: italic;
           color: rgb(78, 78, 78);
+          text-align: justify;
        
         }
 
@@ -58,7 +59,8 @@ article:first-of-type{
             color: #fff;
         }
         button:hover{
-           background-color: #4577a0;  
+           background-color: #21619c; 
+           transition: 1s; 
         }
 
         .carousel-item{
