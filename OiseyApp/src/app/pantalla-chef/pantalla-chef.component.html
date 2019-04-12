@@ -1,12 +1,12 @@
 <article>
 
-  <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
+  <figure><img  [src]="[chefs[0].avatar]" alt=""></figure>
   <h2>{{chefs[0].nombre}}</h2>
-  <h3>{{chefs[0].especialidad}}</h3>
+  <h4>{{chefs[0].especialidad}}</h4>
   <div>
     <p>{{chefs[0].estrellas}}</p>
   </div>
-  <article>{{chefs[0].biografia}}</article>
+  <div class="descrip"><p>{{chefs[0].biografia}}</p></div>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
