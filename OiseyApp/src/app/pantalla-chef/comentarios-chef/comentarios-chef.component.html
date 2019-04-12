@@ -1,6 +1,39 @@
-<h3>Comentarios</h3>
-<section>
-  <article *ngFor="let aChefComment of listaComments">
-    {{aChefComment.titulo}}
-  </article>
-</section>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+		<div class="well">
+        <h1 class="text-center">Comentarios</h1>
+        <div class="list-group">
+          <a *ngFor="let aChefComment of listaComments" class="list-group-item">
+                <div class="media col-md-3">
+                    <figure class="pull-left">
+                        <img class="media-object img-rounded img-responsive"  />
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading"> {{aChefComment.titulo}} </h4>
+                    <p class="list-group-item-text"> {{aChefComment.comentario}} </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p> {{aChefComment.puntuacion}} <small> / </small> 5 </p>
+                </div>
+                <div>
+                  <p>{{aChefComment.fecha}}</p>
+                </div>
+          </a>
+        </div>
+        </div>
+	</div>
+</div>
