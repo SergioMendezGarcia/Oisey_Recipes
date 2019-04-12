@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { serviciochefs } from 'src/app/services/serviciochefs.service';
 import { ServicioChefCommentsService } from 'src/app/services/servicio-chef-comments.service';
-import { ComentarioChef } from 'src/app/Modelos/comentario-chef';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -21,13 +20,13 @@ export class ComentariosChefComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.listaChefs = this._chefServ.getChefs();
+   
     // this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
     this._route.params.subscribe(parametros=>{
-      console.log('Parámetros: ', parametros.tid);
-      const tid=parametros.tid;
-      const theTask = this._chefServ.getChefs();
-      console.log('The task: ',theTask);
+      this.listaChefs = this._chefServ.getChefs();
+      console.log('Parámetros: ', parametros.chefId);
+      this.listaComments = this._chefCommServ.getComments(this.listaChefs[parametros.chefId].comentarios);
+      console.log('Lista de comentarios : ', this.listaComments);
     })
   
   };

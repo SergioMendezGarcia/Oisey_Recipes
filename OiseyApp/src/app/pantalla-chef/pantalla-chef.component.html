@@ -1,12 +1,15 @@
 <article>
 
-  <figure><img  [src]="[chefs[0].avatar]" alt=""></figure>
+  <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
   <h2>{{chefs[0].nombre}}</h2>
   <h4>{{chefs[0].especialidad}}</h4>
   <div>
-    <h4 class="estrellas">{{chefs[0].estrellas}} ~Chef en prácticas~</h4>
+    <h4 class="estrellas"><app-rating [score]="chefs[0].estrellas" [forDisplay]="true"></app-rating> ~Chef en prácticas~</h4>
+    
   </div>
-  <div class="descrip"><p>{{chefs[0].biografia}}</p></div>
+  <div class="descrip">
+    <p>{{chefs[0].biografia}}</p>
+  </div>
   <br />
   <button>Pide a tu Chef</button>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
