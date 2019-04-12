@@ -27,6 +27,7 @@
     border-right:4px solid #0063cf;
     transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
     padding-bottom: 100vh;
+    z-index: 1;
   }
      /*Estilos de los li del menú*/
      .nav__item {
@@ -52,7 +53,7 @@
             border-bottom:17px solid transparent;
             top:0px;
             right:-15px; /*Lo posicionamos -15px a la derecha de su contenedor*/
-            z-index:4; /*le otorgamos un z-index alto para que se posicione arriba de otros elementos*/
+            z-index:10; /*le otorgamos un z-index alto para que se posicione arriba de otros elementos*/
          }
         /*Colocamos el borde verde al triangulo por medio de otro trangulo verde*/
         .current:after {
@@ -83,7 +84,8 @@
       .menu-toogle::before {
         content:"☰";
         font-size:calc(22px + 1.1vw);
-        color:#FFF;
+        // background-color:#00E7FF; 
+        color:#CFFFCF;
       }
   
       /*Estos son los estilos que le dan la funcionalidad al menú*/
@@ -94,6 +96,10 @@
       .checkbox:checked ~ .nav {
         left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
         position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+      }
+      .checkbox:checked ~ .menu-toogle::before{
+        background-color: transparent;
+        transition: .5s;
       }
 
      /*searchbar*/
