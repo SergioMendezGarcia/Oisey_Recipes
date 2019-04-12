@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PedirRecetasComponent implements OnInit {
 
   constructor() { }
-
+  chefId:number = 0;
   ngOnInit() {
   }
 

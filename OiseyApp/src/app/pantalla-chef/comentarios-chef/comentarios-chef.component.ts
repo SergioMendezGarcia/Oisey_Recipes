@@ -16,12 +16,13 @@ export class ComentariosChefComponent implements OnInit {
   
   listaChefs = null;
   listaComments = null;
+  chefId = 0;
  
 
   ngOnInit() {
 
     this.listaChefs = this._chefServ.getChefs();
-    this.listaComments = this._chefCommServ.getComments(this.listaChefs[0].comentarios);
+    this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
   
   };
 
