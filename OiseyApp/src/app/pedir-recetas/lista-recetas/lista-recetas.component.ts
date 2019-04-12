@@ -8,11 +8,35 @@ import { ServicioRecetasService } from 'src/app/services/servicio-recetas.servic
 })
 export class ListaRecetasComponent implements OnInit {
 
-  constructor(private _recetas:ServicioRecetasService) { }
+  constructor(private _recetas: ServicioRecetasService) { }
+  filtro = "rating";
   recetas = null;
+  fc = null;
+
+  filtrarRecetas = function (str) {
+    this.fc = str;
+    if (this.fc == "nombre") {
+      return this.recetas.sort(function(recA,recB){
+        if(recA.nombre>recB.nombre) return 1;
+        else return -1;
+      });
+    }
+    if (this.fc == "rating") {
+      return this.recetas.sort(function(recA,recB){
+        if(recA.rating<recB.rating) return 1;
+        else return -1;
+      });
+    }
+    if (this.fc == "tiempo") {
+      return this.recetas.sort(function(recA,recB){
+        if(recA.tiempo>recB.tiempo) return 1;
+        else return - 1;
+      });
+    }
+  }
+
   ngOnInit() {
     this.recetas = this._recetas.getRecetas();
-    console.log(this.recetas);
   }
 
 }

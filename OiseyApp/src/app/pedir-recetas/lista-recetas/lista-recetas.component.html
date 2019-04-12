@@ -1,12 +1,11 @@
-<select>
-  <option value="">Nombre</option>
-  <option value="">Cercania</option>
-  <option value="">Tiempo</option>
-  <option value="">Estrellas</option>
+<select [(ngModel)]="filtro">
+  <option value="rating">Estrellas</option>
+  <option value="nombre">Nombre</option>
+  <option value="tiempo">Tiempo</option>
 </select>
 <div>
   <ul class="container">
-    <li class="row" *ngFor="let i of recetas">
+    <li class="row" *ngFor="let i of filtrarRecetas(filtro)">
       <span class="col-3"><img [src]="i.fotos[0]"></span>
       <span class="col-5">{{i.nombre}}</span>
       <span class="col-2">{{i.tiempo}}</span>
