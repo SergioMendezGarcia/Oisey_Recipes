@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
+
+  ruta = false;
   constructor() { }
 
   ngOnInit() {
+    if (location.href.indexOf('pedir') >= 0) {
+      this.ruta = true;
+    }
   }
 
 }

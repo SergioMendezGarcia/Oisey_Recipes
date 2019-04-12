@@ -13,6 +13,7 @@ import { ListaRecetasComponent } from './pedir-recetas/lista-recetas/lista-recet
 import { MapaComponent } from './pedir-recetas/mapa/mapa.component';
 import { ComentariosChefComponent } from './pantalla-chef/comentarios-chef/comentarios-chef.component';
 import { RatingComponent } from './pantalla-chef/rating/rating.component';
+import { ValorarcomentarComponent } from './pantalla-chef/valorarcomentar/valorarcomentar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RatingComponent } from './pantalla-chef/rating/rating.component';
     MapaComponent,
     CabeceraComponent,
     ComentariosChefComponent,
-    RatingComponent
+    RatingComponent,
+    ValorarcomentarComponent
   ],
   imports: [
     BrowserModule,
