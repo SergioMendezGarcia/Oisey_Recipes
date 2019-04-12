@@ -6,7 +6,7 @@ import { ComentarioChef } from '../Modelos/comentario-chef';
 })
 export class ServicioChefCommentsService {
 
-  private _chefComments = [
+  private _allChefComments = [
     new ComentarioChef(
       0,
       'The best meal ever',
@@ -29,23 +29,34 @@ export class ServicioChefCommentsService {
   ];
 
   constructor() { };
-                                  //Método para recuperar los comentarios filtrando por id
-                                  //del comentario.
-                                  //El método recibe como párametro el array con la lista
-                                   //completa de comentarios del chef.
-  getComments(comentariosChefs){
-                                  //Declaración variable en la que se almacenarán los comentarios
-                                  //ya filtrados.
-    let comentarios:ComentarioChef[];
-                                  //Bucle for para filtrar los comentarios del chef deseado
-                                  //usando el id asignado a cada comentario, presente tanto en
-                                  //el objeto comentario como en el objeto chef.
+                                    //Método para recuperar los comentarios filtrando por id
+                                    //del comentario.
+                                    //El método recibe como párametro el array con la lista
+                                    //completa de comentarios del chef.
+  getComments(comentariosChefs) {
+                                    //Declaración variable en la que se almacenarán los comentarios
+                                    //ya filtrados.
 
-    for(let i in this._chefComments){
+    var comentarios: ComentarioChef[] = [];
 
-     comentarios = this._chefComments.filter( comentario => comentario[i] == comentariosChefs[i].commentId);
+                                    //Bucle doble for con filtrar los comentarios del chef deseado
+                                    //usando el id asignado a cada comentario, presente tanto en
+                                    //el objeto comentario como en el objeto chef.
 
+
+    for (let unComChef of comentariosChefs) {
+
+                                    //Almacenamos el resultado filtrado en una variable para su posterior uso
+                                    //con el método concatenar.
+                                    
+      const losComentarios = this._allChefComments.filter(unComentObj => unComChef == unComentObj.commentId);
+
+                                    //Imprescindible guardar la concatenación con los comentarios en la variable
+                                    //comentarios, sino el último resultado sobrescribirá al resto.
+
+      comentarios=comentarios.concat(losComentarios);
     }
+
     return comentarios;
 
   };
