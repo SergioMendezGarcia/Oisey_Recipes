@@ -95,4 +95,30 @@
         left:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
         position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
       }
+
+     /*searchbar*/
+
+     .searchbar input{
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+
+      .searchbar button{
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #0063cf;
+      }
+
+      .searchbar button img{
+        width: 15%;
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
     
