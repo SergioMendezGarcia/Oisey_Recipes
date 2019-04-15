@@ -9,6 +9,11 @@ export class CabeceraComponent implements OnInit {
 
 
   ruta = false;
+  filtrarTexto:string = "";
+
+  filtrado = function(texto) {
+
+  }
   constructor() { }
 
   ngOnInit() {

@@ -9,7 +9,7 @@
       </nav>
     <img src="../assets/img/ORfooter.png">
     <div class="searchbar" *ngIf="ruta">
-        <input type="text" placeholder="¿Qué te apetece?"/>
+        <input type="text" [(ngModel)]="filtrarTexto" placeholder="¿Qué te apetece?"/>
         <button><img src="../assets/img/search.png" alt="search button"></button>
     </div>
   </header>
