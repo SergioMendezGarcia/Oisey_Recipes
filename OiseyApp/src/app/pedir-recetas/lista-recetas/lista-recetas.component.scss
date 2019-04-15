@@ -1,3 +1,12 @@
+select{
+ border: 2px solid #00c6Fc;
+ color: #00c6Fc;
+ margin-left: 20%;
+ margin-top: 15px;
+ margin-bottom: 10px;
+
+}
+
 .container{
     border: 2px solid #666;
     border-radius: 5px;
@@ -30,5 +39,9 @@ img{
 @media screen and (max-width: 450px){
     img{
         width: 20vw;
+    }
+    select{
+        margin-left:5%;
+        transition: .5s ease;
     }
 }
