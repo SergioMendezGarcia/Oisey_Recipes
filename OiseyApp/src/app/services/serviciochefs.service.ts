@@ -11,7 +11,7 @@ export class serviciochefs {
       'Josetxo',
       'https://bit.ly/2UfpgT9',
       'comida asiática',
-      2.5,
+      3.5,
       '"Amo de casa con ganas de cocinar. Me gusta mucho la cocina y por eso quiero compartir mis mejores platos con la gente. Sonno italiano pero la mia familia es portuguesa. Mis respetos para la gente"',
       ['https://bit.ly/2P3kF5x', 'https://bit.ly/2VHxHIu', 'https://bit.ly/2De2DsC', 'https://bit.ly/2VGrcp2'],
       {lat: 41.144, lng: 2.145},
