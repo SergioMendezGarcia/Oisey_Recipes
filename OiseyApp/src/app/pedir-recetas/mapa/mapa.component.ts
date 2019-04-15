@@ -23,7 +23,7 @@ export class MapaComponent implements OnInit {
     function initMap()
     {
       map = new google.maps.Map( document.getElementById('map'), 
-                                  { zoom: 1, center: { lat: 41.245, lng: 2.142 } } );
+                                  { zoom: 20, center: { lat: 41.3973938, lng: 2.1900901 } } );
     }                            
     console.log('meh');`
     document.body.appendChild(scr);
