@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(./assets/img/fondo.png);
+    background-size: cover;
+    >div{
+        background-color: rgba($color: #ffffff, $alpha: 0.4)
+    }
+
+    ul{
+        background-color: #fff;
+    }
+
+    .generalChef{
+        background-color: #ffffff;
+        padding: 0px 15px 15px 15px;
+        box-shadow: 4px 4px 4px rgba(80, 87, 126, 0.61);
+        border-radius: 5px;
+        max-width: 70%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width:450px){
+    .generalChef{
+        min-width: 100%;
+        transition: 0.5s ease;
+    }
+}

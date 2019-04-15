@@ -4,12 +4,12 @@
       <nav class="nav">
         <a href="#" class="nav__item">Login</a>
         <a [href]="['/pedir']" class="nav__item current">Haz tu pedido</a>
-        <a [href]="['/chefs']" class="nav__item">Chefs</a>
+        <a [href]="['/chefs/0']" class="nav__item">Chefs</a>
         <a href="#" class="nav__item">¿Vegetariano o vegano?</a>
         <a href="#" class="nav__item">¿Postre?</a>
         <a href="#" class="nav__item">Soporte</a>
       </nav>
-    <img src="../assets/img/ORfooter.png">
+    <a [href]="['/pedir']"><img src="../assets/img/ORfooter.png"></a>
     <div class="searchbar" *ngIf="ruta">
         <input type="text" [(ngModel)]="filtrarTexto" placeholder="¿Qué te apetece?"/>
         <button><img src="../assets/img/search.png" alt="search button"></button>
