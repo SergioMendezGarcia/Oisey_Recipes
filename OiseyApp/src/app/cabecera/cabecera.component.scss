@@ -55,7 +55,7 @@
             top:0px;
             right:-15px; /*Lo posicionamos -15px a la derecha de su contenedor*/
             z-index:10; /*le otorgamos un z-index alto para que se posicione arriba de otros elementos*/
-         }
+    }
         /*Colocamos el borde verde al triangulo por medio de otro trangulo verde*/
         .current:after {
             content:"";
@@ -68,7 +68,7 @@
             top:.5px;
             right:-21px;
             z-index:1;  /*le otorgamos un z-index bajo para que se posicione debajo del trinagulo negro*/
-        }
+    }
     /*Estos son los estilos de la hamburguesa del menú que abre y cierra el mismo*/
     .menu-toogle {
       position:fixed; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
