@@ -3,8 +3,8 @@
       <label for="menu-toogle" class="menu-toogle"></label>
       <nav class="nav">
         <a href="#" class="nav__item">Login</a>
-        <a [href]="['/pedir']" [routerLinkActive]="[current]" class="nav__item">Haz tu pedido</a>
-        <a [href]="['/chefs/0']" [routerLinkActive]="[current]" class="nav__item">Chefs</a>
+        <a [routerLink]="['/pedir']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Haz tu pedido</a>
+        <a [routerLink]="['/chefs/0']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Chefs</a>
         <a href="#" class="nav__item">¿Vegetariano o vegano?</a>
         <a href="#" class="nav__item">¿Postre?</a>
         <a href="#" class="nav__item">Soporte</a>
