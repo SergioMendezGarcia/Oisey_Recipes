@@ -1,7 +1,7 @@
 export class ComentarioChef {
 
     constructor(
-        public commentId:number,
+        public commentId:string,
         public titulo:string,
         public nombreUsuario:string,
         public fotoUsuario:string,

@@ -1,15 +1,15 @@
 export class Chef {
     constructor(
-        public chefId: number,
-        public nombre: string, 
+        public chefId: any,
+        public nombre: string,
+        public mail: string, 
         public avatar: string, 
-        public especialidad: string, 
+        public especialidad: string[], 
         public estrellas: number, 
         public biografia: string, 
         public galeria: string[], 
         public localizacion: object, 
         public ciudad: string,
-        
         public comentarios: number[]){};
 
 }

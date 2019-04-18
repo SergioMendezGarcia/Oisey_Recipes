@@ -1,6 +1,7 @@
 export class Receta {
 
-    constructor(public rid:number, 
+    constructor(
+        
         public nombre:string, 
         public ingr:string, 
         public tiempo:number, 
