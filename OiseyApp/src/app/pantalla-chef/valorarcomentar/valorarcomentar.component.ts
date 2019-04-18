@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValorarcomentarComponent implements OnInit {
   comentarios=null;
-  constructor() { }
+  constructor() { };
 
   ngOnInit() {
-    this.comentarios
+    this.comentarios;
   }
 
 }
