@@ -49,13 +49,12 @@ export class ServicioChefCommentsService {
         })
       );
     }
-
   }
                                     //Método para recuperar los comentarios filtrando por id
                                     //del comentario.
                                     //El método recibe como párametro el array con la lista
                                     //completa de comentarios del chef.
-  getComments() {
+  getComments(comentariosChefs) {
                                     //Declaración variable en la que se almacenarán los comentarios
                                     //ya filtrados.
 
