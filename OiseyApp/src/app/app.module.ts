@@ -14,6 +14,7 @@ import { MapaComponent } from './pedir-recetas/mapa/mapa.component';
 import { ComentariosChefComponent } from './pantalla-chef/comentarios-chef/comentarios-chef.component';
 import { RatingComponent } from './pantalla-chef/rating/rating.component';
 import { ValorarcomentarComponent } from './pantalla-chef/valorarcomentar/valorarcomentar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ValorarcomentarComponent } from './pantalla-chef/valorarcomentar/valora
     CabeceraComponent,
     ComentariosChefComponent,
     RatingComponent,
-    ValorarcomentarComponent
+    ValorarcomentarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
