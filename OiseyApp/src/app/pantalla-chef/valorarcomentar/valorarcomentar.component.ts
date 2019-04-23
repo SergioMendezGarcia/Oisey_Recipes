@@ -13,8 +13,8 @@ export class ValorarcomentarComponent implements OnInit {
   constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
 
   ngOnInit() {
-   
-    this._chefCommServ.getComments();
+    let hello = 1;
+    this._chefCommServ.getComments(hello);
 
   }
 
