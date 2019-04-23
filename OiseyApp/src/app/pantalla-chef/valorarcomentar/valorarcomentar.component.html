@@ -7,27 +7,33 @@
             
           </textarea>
          
-          <form class="form-inline">
-            <button class="btn btn-primary pull-right" type="button">Compartir</button>  
-          </form>
-          <span> 
-          <fieldset class="rating">
-              <input type="radio" [name]="inputName" value="5" [checked]="rating===5" />
-              <label title="Es un crack!" (click)='onClick(5)'>5 stars</label>
-            
-              <input type="radio" [name]="inputName" value="4" [checked]="rating===4" />
-              <label title="Buena comida" (click)='onClick(4)'>4 stars</label>
-            
-              <input type="radio" [name]="inputName" value="3" [checked]="rating===3" />
-              <label title="Nada mal" (click)='onClick(3)'>3 stars</label>
-            
-              <input type="radio" [name]="inputName" value="2" [checked]="rating===2" />
-              <label title="Se puede mejorar" (click)='onClick(2)'>2 stars</label>
-            
-              <input type="radio" [name]="inputName" value="1" [checked]="rating===1" />
-              <label title="Necesita un curso de cocina" (click)='onClick(1)'>1 star</label>
-            </fieldset>
-          </span> 
+    
+            <button class="btn btn-primary pull-right" type="button">Compartir</button> 
+                <span>
+                  <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+                    <!--
+                            --><label for="radio1">★</label>
+                    <!--
+                            --><input id="radio2" type="radio" name="estrellas" value="4">
+                    <!--
+                            --><label for="radio2">★</label>
+                    <!--
+                            --><input id="radio3" type="radio" name="estrellas" value="3">
+                    <!--
+                            --><label for="radio3">★</label>
+                    <!--
+                            --><input id="radio4" type="radio" name="estrellas" value="2">
+                    <!--
+                            --><label for="radio4">★</label>
+                    <!--
+                            --><input id="radio5" type="radio" name="estrellas" value="1">
+                    <!--
+                            --><label for="radio5">★</label>
+                  </p>
+                </span>
+          
+      
         
         </div>
       </div>
