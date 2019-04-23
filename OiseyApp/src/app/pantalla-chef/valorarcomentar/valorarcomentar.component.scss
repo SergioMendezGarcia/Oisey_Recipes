@@ -10,45 +10,36 @@
         width: 100%;
         border: 1px solid #F2F2F2;
     }
-  
-.rating {
-    float:left;
+ form{
+     display: inline;
+ }
+span p {
+  text-align: right;
+ 
 }
 
-.rating:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-    clip:rect(0,0,0,0);
+span label {
+  font-size: 20px;
 }
 
-.rating:not(:checked) > label {
-    float:right;
-    width:1em;
-    padding:0.1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:200%;
-    line-height:1.2;
-    color:#ddd;
+input[type="radio"] {
+  display: none;
 }
 
-.rating:not(:checked) > label:before {
-    content: '★ ';
+label {
+  color: grey;
 }
 
-.rating > input:checked ~ label {
-    color: #f70;
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-    color: gold;
+label:hover,
+label:hover ~ label {
+  color: orange;
 }
 
-
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
+input[type="radio"]:checked ~ label {
+  color: orange;
 }
