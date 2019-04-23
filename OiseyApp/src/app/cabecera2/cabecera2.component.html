@@ -1,4 +1,4 @@
-<header id="bigHead">
+<header>
     <input type="checkbox" class="checkbox" id="menu-toogle"/>
       <label for="menu-toogle" class="menu-toogle"></label>
       <nav class="nav">
@@ -9,7 +9,7 @@
         <a [routerLink]="['/postre']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">¿Postre?</a>
         <a [routerLink]="['/soporte']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Soporte</a>
       </nav>
-    <a [href]="['/pedir']"><img id='logo' src="../assets/img/ORfooter.png"></a>
+    <a [href]="['/pedir']"><img src="../assets/img/ORfooter.png"></a>
     <div class="searchbar" *ngIf="ruta">
         <input type="text" [(ngModel)]="filtrarTexto" placeholder="¿Qué te apetece?"/>
         <button><img src="../assets/img/search.png" alt="search button"></button>
