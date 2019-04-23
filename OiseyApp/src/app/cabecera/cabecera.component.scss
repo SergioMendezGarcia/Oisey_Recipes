@@ -43,6 +43,17 @@
        color:rgba(221, 231, 228, 1);
     }
 
+    .nav__item:hover{
+      text-decoration: none;
+      color: #CFFFCF;
+      background-color: #003399;
+    }
+
+    .nav__item:active{
+      color: #0000ff;
+    }
+
+
       /*colocamos el triangulo negro a la pestaña del menú dónde nos encontramos actualmente*/
          .current:before {
             content:"";
@@ -55,20 +66,21 @@
             top:0px;
             right:-15px; /*Lo posicionamos -15px a la derecha de su contenedor*/
             z-index:10; /*le otorgamos un z-index alto para que se posicione arriba de otros elementos*/
-         }
+            font-size: 1.3vw;
+    }
         /*Colocamos el borde verde al triangulo por medio de otro trangulo verde*/
         .current:after {
             content:"";
             width:0;
             height:0;
             position:absolute;/*Le damos al after una posición absoluta relativa al li que lo contiene*/
-            border-top:16.5px solid transparent;
-            border-left:17px solid #0063cf;
+            border-top: 17px solid transparent;
+            border-left:15px solid #0063cf;
             border-bottom:17px solid transparent;
             top:.5px;
             right:-21px;
             z-index:1;  /*le otorgamos un z-index bajo para que se posicione debajo del trinagulo negro*/
-        }
+    }
     /*Estos son los estilos de la hamburguesa del menú que abre y cierra el mismo*/
     .menu-toogle {
       position:fixed; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
@@ -78,15 +90,15 @@
       top:9px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
       left: 14px; 
       border-radius:3px;
-      transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
+      // transition: all .5s ease; /*Añadimos una transición para que realice un desplazamineto suave*/
       z-index:10;
     }
-      /*Añadimos la haburguesa y le damos unos estilos*/
+      /*Añadimos la hamburguesa y le damos unos estilos*/
       .menu-toogle::before {
         content:"☰";
         font-size:calc(22px + 1.1vw);
         // background-color:#00E7FF; 
-        color:#CFFFCF;
+        color:#0063cf;
       }
   
       /*Estos son los estilos que le dan la funcionalidad al menú*/
@@ -100,7 +112,8 @@
       }
       .checkbox:checked ~ .menu-toogle::before{
         background-color: transparent;
-        transition: .5s;
+        color: #CFFFCF;
+        transition: .5s ease;
       }
 
      /*searchbar*/
