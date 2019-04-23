@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'vegan', component: VeganComponent, pathMatch: 'full'},
   {path: 'postre', component: PostreComponent, pathMatch: 'full'},
   {path: 'soporte', component: SoporteComponent, pathMatch: 'full'},
-  {path: '**', redirectTo: 'chefs/0', pathMatch:'full'},
+  // {path: '**', redirectTo: 'chefs/0', pathMatch:'full'},
   {path: '', redirectTo: 'pedir', pathMatch:'full'}
 ];
 

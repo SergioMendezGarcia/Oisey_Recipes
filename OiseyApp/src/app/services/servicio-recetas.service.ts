@@ -36,7 +36,7 @@ export class ServicioRecetasService {
     if (this._recetas) {
       return of(this._recetas);
     } else {
-      return this._http.get<Receta[]>('http://localhost:8080/api/pets').pipe(
+      return this._http.get<Receta[]>('http://172.27.96.221:8080/api/recipes').pipe(
         tap(data => {
           this._recetas = data;
         })
