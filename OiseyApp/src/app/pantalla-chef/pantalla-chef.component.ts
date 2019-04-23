@@ -19,7 +19,7 @@ export class PantallaChefComponent implements OnInit {
   ngOnInit() {
 
        // this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
-       
+
       this._route.params.subscribe(parametros=>{
 
       this.listaChefs = this._chefServ.getChefs();
