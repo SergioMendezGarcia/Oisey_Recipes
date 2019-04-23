@@ -12,13 +12,15 @@ export class ValorarcomentarComponent implements OnInit {
 
   @Input() chef: Chef;
   comentarios=null;
-
+ 
+  
   constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
 
   ngOnInit() {
   
     this._chefCommServ.getComments(this.chef.comentarios);
+ 
 
   }
-
+ 
 }

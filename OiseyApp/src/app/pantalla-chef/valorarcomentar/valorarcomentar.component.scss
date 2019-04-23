@@ -10,3 +10,38 @@
         width: 100%;
         border: 1px solid #F2F2F2;
     }
+ button{
+     display: inline;
+     margin-left: 4px;
+ }
+span p {
+  text-align: right;
+  margin-right: 4px;
+ 
+}
+
+span label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
