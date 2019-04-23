@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cabecera.component.html',
   styleUrls: ['./cabecera.component.scss']
 })
-export class CabeceraComponent implements OnInit {
+export class CabeceraComponent {
 
 
   ruta = false;
