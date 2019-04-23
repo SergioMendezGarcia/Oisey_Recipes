@@ -26,8 +26,8 @@ export class ComentariosChefComponent implements OnInit {
 
       var theChef:Chef = null;
       this.listaChefs = this._chefServ.getChefs();
-
-        theChef = this.listaChefs.filter(aChefObj => aChefObj.chefId == parametros);
+    
+      theChef = this.listaChefs.filter(aChefObj => aChefObj.chefId == parametros);
         // const comentarios=this.listaChefs[parametros.chefId].comentarios;
       
       

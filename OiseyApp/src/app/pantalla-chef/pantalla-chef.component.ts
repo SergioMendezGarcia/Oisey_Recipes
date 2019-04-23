@@ -8,9 +8,7 @@ import { serviciochefs } from '../services/serviciochefs.service';
   styleUrls: ['./pantalla-chef.component.scss']
 })
 export class PantallaChefComponent implements OnInit {
-
   chefs = null;
-  aChef = null;
   constructor(private _chefServ: serviciochefs) { }
 
   ngOnInit() {
