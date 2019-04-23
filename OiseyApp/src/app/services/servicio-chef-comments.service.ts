@@ -1,39 +1,61 @@
 import { Injectable } from '@angular/core';
 import { ComentarioChef } from '../Modelos/comentario-chef';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioChefCommentsService {
 
-  private _allChefComments = [
-    new ComentarioChef(
-      0,
-      'The best meal ever',
-      'Paquita Pérez',
-      'paquitaperez.jpg',
-      5,
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium ipsam dolore, totam suscipit nam commodi eos aut officia id, iusto accusamus quos ab ullam labore, debitis et pariatur quidem!',
-      '1 julio 2018'
-    ),
-    new ComentarioChef(
-      1,
-      'The worst meal ever',
-      'Francisco Soler',
-      'fsoler.jpg',
-      1,
-      'Lorem ipsum dolor, dolor el que se siente tras comer  sit amet consectetur adipisicing elit. Cumque praesentium ipsam dolore, totam suscipit nam commodi eos aut officia id, iusto accusamus quos ab ullam labore, debitis et pariatur quidem!',
-      '1 julio 2018'
-    ),
+  private _allChefComments = null;
+  private $commentsObserver = new BehaviorSubject(this._allChefComments);
+  private _commentObservable;
 
-  ];
+  // [
+  //   new ComentarioChef(
+  //     0,
+  //     'The best meal ever',
+  //     'Paquita Pérez',
+  //     'paquitaperez.jpg',
+  //     5,
+  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium ipsam dolore, totam suscipit nam commodi eos aut officia id, iusto accusamus quos ab ullam labore, debitis et pariatur quidem!',
+  //     '1 julio 2018'
+  //   ),
+  //   new ComentarioChef(
+  //     1,
+  //     'The worst meal ever',
+  //     'Francisco Soler',
+  //     'fsoler.jpg',
+  //     1,
+  //     'Lorem ipsum dolor, dolor el que se siente tras comer  sit amet consectetur adipisicing elit. Cumque praesentium ipsam dolore, totam suscipit nam commodi eos aut officia id, iusto accusamus quos ab ullam labore, debitis et pariatur quidem!',
+  //     '1 julio 2018'
+  //   ),
 
-  constructor() { };
+  // ];
+
+  constructor(private _http: HttpClient) { };
+
+
+  getCommentsFromAPI(): Observable<ComentarioChef[]> {
+    if (this._allChefComments) {
+      return of(this._allChefComments);
+    } else {
+      return this._http.get<ComentarioChef[]>('http://localhost:8080/api/pets').pipe(
+        tap(data => {
+          this._allChefComments = data;
+        })
+      );
+    }
+
+  }
                                     //Método para recuperar los comentarios filtrando por id
                                     //del comentario.
                                     //El método recibe como párametro el array con la lista
                                     //completa de comentarios del chef.
-  getComments(comentariosChefs) {
+  getComments() {
                                     //Declaración variable en la que se almacenarán los comentarios
                                     //ya filtrados.
 
