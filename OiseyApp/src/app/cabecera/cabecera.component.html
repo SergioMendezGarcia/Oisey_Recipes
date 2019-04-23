@@ -2,12 +2,12 @@
     <input type="checkbox" class="checkbox" id="menu-toogle"/>
       <label for="menu-toogle" class="menu-toogle"></label>
       <nav class="nav">
-        <a href="#" class="nav__item">Login</a>
+        <a [routerLink]="['/login']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Login</a>
         <a [routerLink]="['/pedir']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Haz tu pedido</a>
         <a [routerLink]="['/chefs/0']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Chefs</a>
-        <a href="#" class="nav__item">¿Vegetariano o vegano?</a>
-        <a href="#" class="nav__item">¿Postre?</a>
-        <a href="#" class="nav__item">Soporte</a>
+        <a [routerLink]="['/vegan']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">¿Vegetariano o vegano?</a>
+        <a [routerLink]="['/postre']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">¿Postre?</a>
+        <a [routerLink]="['/soporte']" routerLinkActive='current' [routerLinkActiveOptions]= '{exact:true}' class="nav__item">Soporte</a>
       </nav>
     <a [href]="['/pedir']"><img src="../assets/img/ORfooter.png"></a>
     <div class="searchbar" *ngIf="ruta">
