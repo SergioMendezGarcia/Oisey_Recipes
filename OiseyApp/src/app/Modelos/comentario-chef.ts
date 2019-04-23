@@ -2,11 +2,12 @@ export class ComentarioChef {
 
     constructor(
         public commentId:string,
-        public nombre:string,
-        public nombreUsuario:string,
-        public fotoUsuario:string,
+        public titulo:string,
+        public userName:string,
+        public userMail:string,
+        public fotoUser:string,
         public puntuacion:number,
-        public comentario:string,
+        public commentText:string,
         public fecha:string,
         public chefId:string,
         ){};
