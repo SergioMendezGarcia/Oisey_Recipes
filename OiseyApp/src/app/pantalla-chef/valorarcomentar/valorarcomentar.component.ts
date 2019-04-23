@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ServicioChefCommentsService } from 'src/app/services/servicio-chef-comments.service';
 import { serviciochefs } from 'src/app/services/serviciochefs.service';
+import { Chef } from 'src/app/Modelos/modeloChefs';
 
 @Component({
   selector: 'valorarcomentar',
@@ -8,13 +9,15 @@ import { serviciochefs } from 'src/app/services/serviciochefs.service';
   styleUrls: ['./valorarcomentar.component.scss']
 })
 export class ValorarcomentarComponent implements OnInit {
+
+  @Input() chef: Chef;
   comentarios=null;
 
   constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
 
   ngOnInit() {
-    let hello = 1;
-    this._chefCommServ.getComments(hello);
+  
+    this._chefCommServ.getComments(this.chef.comentarios);
 
   }
 
