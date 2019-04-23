@@ -18,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 import { VeganComponent } from './vegan/vegan.component';
 import { PostreComponent } from './postre/postre.component';
 import { SoporteComponent } from './soporte/soporte.component';
+import { Cabecera2Component } from './cabecera2/cabecera2.component';
+import { CabeceraPostresComponent } from './cabecera-postres/cabecera-postres.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { SoporteComponent } from './soporte/soporte.component';
     LoginComponent,
     VeganComponent,
     PostreComponent,
-    SoporteComponent
+    SoporteComponent,
+    Cabecera2Component,
+    CabeceraPostresComponent
   ],
   imports: [
     BrowserModule,
