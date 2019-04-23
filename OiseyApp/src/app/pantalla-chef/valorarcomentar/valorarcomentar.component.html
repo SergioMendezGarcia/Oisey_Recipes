@@ -3,10 +3,32 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-info">
         <div class="panel-body">
-          <textarea placeholder="Escribe la valoración de tu Chef aquí" class="pb-cmnt-textarea"></textarea>
+          <textarea placeholder="Escribe la valoración de tu Chef aquí" class="pb-cmnt-textarea">
+            
+          </textarea>
+         
           <form class="form-inline">
-            <button class="btn btn-primary pull-right" type="button">Compartir</button>
+            <button class="btn btn-primary pull-right" type="button">Compartir</button>  
           </form>
+          <span> 
+          <fieldset class="rating">
+              <input type="radio" [name]="inputName" value="5" [checked]="rating===5" />
+              <label title="Es un crack!" (click)='onClick(5)'>5 stars</label>
+            
+              <input type="radio" [name]="inputName" value="4" [checked]="rating===4" />
+              <label title="Buena comida" (click)='onClick(4)'>4 stars</label>
+            
+              <input type="radio" [name]="inputName" value="3" [checked]="rating===3" />
+              <label title="Nada mal" (click)='onClick(3)'>3 stars</label>
+            
+              <input type="radio" [name]="inputName" value="2" [checked]="rating===2" />
+              <label title="Se puede mejorar" (click)='onClick(2)'>2 stars</label>
+            
+              <input type="radio" [name]="inputName" value="1" [checked]="rating===1" />
+              <label title="Necesita un curso de cocina" (click)='onClick(1)'>1 star</label>
+            </fieldset>
+          </span> 
+        
         </div>
       </div>
     </div>

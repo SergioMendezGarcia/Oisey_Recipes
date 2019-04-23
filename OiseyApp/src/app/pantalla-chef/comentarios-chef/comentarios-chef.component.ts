@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { serviciochefs } from 'src/app/services/serviciochefs.service';
 import { ServicioChefCommentsService } from 'src/app/services/servicio-chef-comments.service';
 import { ActivatedRoute } from '@angular/router';
@@ -11,29 +11,18 @@ import { Chef } from 'src/app/Modelos/modeloChefs';
   templateUrl: './comentarios-chef.component.html',
   styleUrls: ['./comentarios-chef.component.scss']
 })
-export class ComentariosChefComponent implements OnInit {
 
-  constructor(private _route:ActivatedRoute, private _chefServ:serviciochefs, private _chefCommServ:ServicioChefCommentsService) { }
+export class ComentariosChefComponent implements OnInit {
   
-  listaChefs = null;
+  @Input() chef: Chef;
+
+  constructor(private _chefCommServ:ServicioChefCommentsService) { }
+  
   listaComments = null;
  
-
   ngOnInit() {
 
-    // this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
-    this._route.params.subscribe(parametros=>{
-
-      var theChef:Chef = null;
-      this.listaChefs = this._chefServ.getChefs();
-
-        theChef = this.listaChefs.filter(aChefObj => aChefObj.chefId == parametros);
-        // const comentarios=this.listaChefs[parametros.chefId].comentarios;
-      
-      
-      this.listaComments = this._chefCommServ.getComments(theChef.comentarios);
-
-    })
+    this.listaComments = this._chefCommServ.getComments(this.chef.comentarios);
   
   };
 

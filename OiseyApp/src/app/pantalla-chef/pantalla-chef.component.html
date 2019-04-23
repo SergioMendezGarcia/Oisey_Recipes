@@ -9,7 +9,7 @@
     
   </div>
   <div class="descrip">
-    <p>{{chefs[0].biografia}}</p>
+    <p>{{theChef.biografia}}</p>
   </div>
   <br />
   <button>Pide a tu Chef</button>
@@ -17,7 +17,7 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img [src]="chefs[0].galeria[0]" class="d-block w-100" alt="">
+        <img [src]="theChef.galeria[0]" class="d-block w-100" alt="">
       </div>
       <div *ngFor='let aImgChef of chefs[0].galeria' class="carousel-item">
         <img [src]="aImgChef" class="d-block w-100" alt="">
@@ -32,6 +32,6 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <!-- <comentarios-chef [chef] = "aChef"></comentarios-chef>
-  <valorarcomentar [chef] = "aChef"></valorarcomentar> -->
+  <comentarios-chef [chef] = "theChef"></comentarios-chef>
+  <valorarcomentar [chef] = "theChef"></valorarcomentar>
 </article>
