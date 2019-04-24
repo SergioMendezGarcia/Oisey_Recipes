@@ -35,5 +35,9 @@ export class serviciochefs {
   pushComentario(idchef,com):Observable<Chef>{
     return this._http.put<Chef>('http://172.27.96.221:8080/api/chefs/' + idchef, {comentario: com});
   }
+  putCommentRating(idchef,com,val):Observable<Chef>{
+    return this._http.put<Chef>('http://172.27.96.221:8080/api/chefs/' + idchef,{comentario:com,valoracion:val} );
+  }
+
 }
 

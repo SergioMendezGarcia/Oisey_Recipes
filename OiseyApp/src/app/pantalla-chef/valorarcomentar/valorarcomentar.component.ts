@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ServicioChefCommentsService } from 'src/app/services/servicio-chef-comments.service';
 import { serviciochefs } from 'src/app/services/serviciochefs.service';
 import { Chef } from 'src/app/Modelos/modeloChefs';
-import { ComentarioChef } from 'src/app/Modelos/comentario-chef';
+
 
 @Component({
   selector: 'valorarcomentar',
@@ -12,25 +11,34 @@ import { ComentarioChef } from 'src/app/Modelos/comentario-chef';
 export class ValorarcomentarComponent implements OnInit {
 
   @Input() chef: Chef;
-  texto='';
+  texto:string=null;
+
+  puntuacion:number=0;
+
   
-  constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
+  constructor(private _chefServ:serviciochefs) { };
 
   ngOnInit() {
+
   }
 
   puntuar(puntuacion){
     console.log(puntuacion);
-    this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
+    /* this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
       console.log('data:',data);
-    })
-    return puntuacion;
+    
+    })  */ 
+    this.puntuacion=puntuacion;
+    
   }
-  comentar(comentario){
-    console.log(comentario);
-    this._chefServ.pushComentario(this.chef._id,comentario).subscribe(datos=>{
+  
+  comentar(){
+    console.log('puntuacion: ', this.puntuacion, 'comentario: ', this.texto);
+    this._chefServ.putCommentRating(this.chef._id,this.texto,this.puntuacion).subscribe(datos=>{
       console.log('data',datos)
-    })
-    return comentario
+    });
+
+       
   }
+  
 }
