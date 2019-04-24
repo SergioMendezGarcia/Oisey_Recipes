@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { VeganComponent } from '../vegan/vegan.component';
 import { ServicioRecetasService } from 'src/app/services/servicio-recetas.service';
 
 @Component({
-  selector: 'lista-recetas',
-  templateUrl: './lista-recetas.component.html',
-  styleUrls: ['./lista-recetas.component.scss']
+  selector: 'lista-vegana',
+  templateUrl: './lista-vegana.component.html',
+  styleUrls: ['./lista-vegana.component.scss']
 })
-export class ListaRecetasComponent implements OnInit {
+export class ListaVeganaComponent implements OnInit {
 
-  constructor(private _recetas: ServicioRecetasService) { }
+  constructor(private _recetas: VeganComponent) { }
   filtro = "rating";
   recetas = null;
   fc = null;
@@ -34,13 +35,8 @@ export class ListaRecetasComponent implements OnInit {
       });
     }
   }
-  
 
   ngOnInit() {
-    this.recetas = this._recetas.getRecetasFromApi().subscribe(recetas=>{
-      this.recetas = recetas;
-    });
-    console.log(this.recetas);
+    this.recetas = this._recetas.getRecetas();
   }
-
 }

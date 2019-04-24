@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { PostreComponent } from '../postre/postre.component';
 import { ServicioRecetasService } from 'src/app/services/servicio-recetas.service';
 
 @Component({
-  selector: 'lista-recetas',
-  templateUrl: './lista-recetas.component.html',
-  styleUrls: ['./lista-recetas.component.scss']
+  selector: 'lista-postres',
+  templateUrl: './lista-postres.component.html',
+  styleUrls: ['./lista-postres.component.scss']
 })
-export class ListaRecetasComponent implements OnInit {
+export class ListaPostresComponent implements OnInit {
 
-  constructor(private _recetas: ServicioRecetasService) { }
+  constructor(private _recetas: PostreComponent) { }
   filtro = "rating";
   recetas = null;
   fc = null;
@@ -34,13 +35,11 @@ export class ListaRecetasComponent implements OnInit {
       });
     }
   }
-  
 
-  ngOnInit() {
-    this.recetas = this._recetas.getRecetasFromApi().subscribe(recetas=>{
-      this.recetas = recetas;
-    });
-    console.log(this.recetas);
+ ngOnInit() {
+    this.recetas = this._recetas.getRecetas();
   }
 
 }
+
+
