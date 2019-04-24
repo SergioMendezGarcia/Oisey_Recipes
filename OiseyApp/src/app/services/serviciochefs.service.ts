@@ -51,7 +51,7 @@ export class serviciochefs {
     if (this._chefs) {
       return of(this._chefs);
     } else {
-      return this._http.get<Chef[]>('http://localhost:8080/api/pets').pipe(
+      return this._http.get<Chef[]>('http://172.27.96.221:8080/api/chefs').pipe(
         tap(data => {
           this._chefs = data;
         })

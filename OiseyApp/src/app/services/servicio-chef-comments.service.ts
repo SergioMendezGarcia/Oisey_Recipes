@@ -43,7 +43,7 @@ export class ServicioChefCommentsService {
     if (this._allChefComments) {
       return of(this._allChefComments);
     } else {
-      return this._http.get<ComentarioChef[]>('http://localhost:8080/api/pets').pipe(
+      return this._http.get<ComentarioChef[]>('http://172.27.96.221:8080/api/comments').pipe(
         tap(data => {
           this._allChefComments = data;
         })
