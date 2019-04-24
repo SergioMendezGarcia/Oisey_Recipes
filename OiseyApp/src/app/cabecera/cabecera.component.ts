@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent {
 
-
+  src='../assets/img/ORfooter.png';
   ruta = false;
   filtrarTexto:string = "";
 
@@ -24,14 +24,11 @@ export class CabeceraComponent {
 
   ngDoCheck() {
     if (location.href.indexOf('vegan') >= 0) {
-      document.getElementById('logo').src = '../assets/img/ORvegan.png';
-      // document.getElementById('bigHead').style.backgroundColor = '#33ff33';
+      this.src='../assets/img/ORvegan.png';
     }else if (location.href.indexOf('postre') >= 0) {
-      document.getElementById('logo').src = '../assets/img/ORpostre.png';
-      // document.getElementById('bigHead').style.backgroundColor = '#ffb3ff';
+      this.src= '../assets/img/ORpostre.png';
     }else{
-      document.getElementById('logo').src = '../assets/img/ORfooter.png';
-      // document.getElementById('bigHead').style.backgroundColor = '';
+      this.src= '../assets/img/ORfooter.png';
     }
   }
 
