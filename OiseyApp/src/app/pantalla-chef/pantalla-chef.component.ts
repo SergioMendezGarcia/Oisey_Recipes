@@ -25,7 +25,6 @@ export class PantallaChefComponent implements OnInit {
       
 
         this.listaChefs = this._chefServ.getChefsFromAPI(parametros).subscribe(data=>{
-    
         this.theChef = data[0];
         this.estrellas = this.theChef.estrellas;
         this.calcularMedia(this.estrellas);

@@ -58,28 +58,28 @@ export class ServicioChefCommentsService {
   getComments(comentariosChefs) {
                                     //Declaración variable en la que se almacenarán los comentarios
                                     //ya filtrados.
+    
+    // var comentarios: ComentarioChef[] = [];
 
-    var comentarios: ComentarioChef[] = [];
+    //                                 //Bucle doble for con filtrar los comentarios del chef deseado
+    //                                 //usando el id asignado a cada comentario, presente tanto en
+    //                                 //el objeto comentario como en el objeto chef.
 
-                                    //Bucle doble for con filtrar los comentarios del chef deseado
-                                    //usando el id asignado a cada comentario, presente tanto en
-                                    //el objeto comentario como en el objeto chef.
+    //                                 console.log('Comentarios: ', comentariosChefs);
+    // for (let unComChef of comentariosChefs) {
 
-
-    for (let unComChef of comentariosChefs) {
-
-                                    //Almacenamos el resultado filtrado en una variable para su posterior uso
-                                    //con el método concatenar.
+    //                                 //Almacenamos el resultado filtrado en una variable para su posterior uso
+    //                                 //con el método concatenar.
                                     
-      const losComentarios = this._allChefComments.filter(unComentObj => unComChef == unComentObj.commentId);
+    //   const losComentarios = this._allChefComments.filter(unComentObj => unComChef == unComentObj.commentId);
 
-                                    //Imprescindible guardar la concatenación con los comentarios en la variable
-                                    //comentarios, sino el último resultado sobrescribirá al resto.
+    //                                 //Imprescindible guardar la concatenación con los comentarios en la variable
+    //                                 //comentarios, sino el último resultado sobrescribirá al resto.
 
-      comentarios=comentarios.concat(losComentarios);
-    }
-
-    return comentarios;
+    //   comentarios=comentarios.concat(losComentarios);
+    // }
+    console.log('Comentarios: ', comentariosChefs)
+    return comentariosChefs;
 
   };
 }

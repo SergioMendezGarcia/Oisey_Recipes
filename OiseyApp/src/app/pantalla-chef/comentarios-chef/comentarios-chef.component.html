@@ -12,12 +12,12 @@
           <a *ngFor="let aChefComment of listaComments" class="list-group-item">
                 <div class="media col-md-3">
                     <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive"  [src]="aChefComment.fotoUsuario" [alt]="aChefComment.nombreUsuario"/>
+                        <img class="media-object img-rounded img-responsive"  [src]="aChefComment.fotoUser" [alt]="aChefComment.userName"/>
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <h4 class="list-group-item-heading"> {{aChefComment.titulo}} </h4>
-                    <p class="list-group-item-text"> {{aChefComment.comentario}} </p>
+                    <p class="list-group-item-text"> {{aChefComment.commentText}} </p>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="stars">
