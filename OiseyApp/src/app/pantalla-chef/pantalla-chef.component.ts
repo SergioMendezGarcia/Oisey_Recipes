@@ -24,11 +24,11 @@ export class PantallaChefComponent implements OnInit {
     this._route.params.subscribe(parametros => {
       
 
-        this.listaChefs = this._chefServ.getChefsFromAPI(parametros).subscribe(data=>{
-    
-        this.theChef = data[0];
+        this.listaChefs = this._chefServ.getChefsFromAPI(parametros.chefId).subscribe(data=>{
+        this.theChef = data;
         this.estrellas = this.theChef.estrellas;
         this.calcularMedia(this.estrellas);
+        console.log('Data: ',  data);
 
       });
     });
