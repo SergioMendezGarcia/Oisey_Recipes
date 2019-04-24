@@ -3,10 +3,12 @@ export class ComentarioChef {
     constructor(
         public commentId:string,
         public titulo:string,
-        public nombreUsuario:string,
-        public fotoUsuario:string,
+        public userName:string,
+        public userMail:string,
+        public fotoUser:string,
         public puntuacion:number,
-        public comentario:string,
-        public fecha:string
+        public commentText:string,
+        public fecha:string,
+        public chefId:string,
         ){};
 }
