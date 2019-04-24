@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Recipe = require('../models/recetas');
 
-router.route('/recipes')
+router.route('/recipes')    
 
     .get(function (req, res) {
 
@@ -23,17 +23,17 @@ router.route('/recipes')
         recipe.rating = req.body.rating;
         recipe.chefId = req.body.chefId;
 
-        Recipe.findOne({ recipe: recipe.nombre, chef: recipe.chefId }).then(aChef => {
-            if (aChef) {
+        Recipe.findOne({ recipe: recipe.nombre, chef: recipe.chefId }).then(aRecipe => {
+            if (aRecipe) {
                 res.status(409).send({ message: 'This recipe already exists' });
-                aChef = null;
-            } else { aChef = user; }
+                aRecipe = null;
+            } else { aRecipe = recipe; }
 
-            return aChef;
-        }).then(aChef => {
-            if (aChef) aChef.save();
+            return aRecipe;
+        }).then(aRecipe => {
+            if (aRecipe) aRecipe.save();
 
-            return aChef;
+            return aRecipe;
         }).then(savedRecipe => {
             console.log('savedRecipe:', savedRecipe);
 
