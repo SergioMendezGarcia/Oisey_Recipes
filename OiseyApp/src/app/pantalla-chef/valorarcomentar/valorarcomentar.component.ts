@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ServicioChefCommentsService } from 'src/app/services/servicio-chef-comments.service';
 import { serviciochefs } from 'src/app/services/serviciochefs.service';
 import { Chef } from 'src/app/Modelos/modeloChefs';
+import { ComentarioChef } from 'src/app/Modelos/comentario-chef';
 
 @Component({
   selector: 'valorarcomentar',
@@ -23,12 +24,13 @@ export class ValorarcomentarComponent implements OnInit {
     this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
       console.log('data:',data);
     })
+    return puntuacion;
   }
   comentar(comentario){
     console.log(comentario);
     this._chefServ.pushComentario(this.chef._id,comentario).subscribe(datos=>{
       console.log('data',datos)
     })
+    return comentario
   }
- 
 }
