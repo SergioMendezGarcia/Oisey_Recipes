@@ -11,16 +11,21 @@ import { Chef } from 'src/app/Modelos/modeloChefs';
 export class ValorarcomentarComponent implements OnInit {
 
   @Input() chef: Chef;
-  comentarios=null;
  
   
   constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
 
   ngOnInit() {
-  
-    this._chefCommServ.getComments(this.chef.comentarios);
- 
+  }
 
+  puntuar(puntuacion){
+    console.log(puntuacion);
+    this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
+      console.log('data:',data);
+    })
+  }
+  comentar(comentario){
+    console.log(comentario);
   }
  
 }
