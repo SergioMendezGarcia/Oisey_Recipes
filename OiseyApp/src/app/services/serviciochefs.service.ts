@@ -15,11 +15,11 @@ export class serviciochefs {
   constructor(private _http: HttpClient) { };
 
 
-  getChefsFromAPI(cid): Observable<Chef[]> {
+  getChefsFromAPI(cid): Observable<Chef> {
     if (this._chefs) {
       return of(this._chefs);
     } else {
-      return this._http.get<Chef[]>(`${environment.API_URL}/chefs/${cid}`);
+      return this._http.get<Chef>(`${environment.API_URL}/chefs/${cid}`);
     }
   };
   putValoracion(idchef, val): Observable<Chef> {
