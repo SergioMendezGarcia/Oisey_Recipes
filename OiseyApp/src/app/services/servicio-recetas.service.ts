@@ -44,9 +44,6 @@ export class ServicioRecetasService {
       );
     }
   };
-                                      //Método para devolver el array mock _receta
-                                      s
-  getRecetas(){return this._recetas};
                                       //Método para filtar recetas
 
 
