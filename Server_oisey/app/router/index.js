@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const user = require('./users');
 const chef = require('./chefs');
 const comments = require('./comentarios');
+const recipes = require('./recipes');
 
 
 // middleware to use for all requests
@@ -19,6 +20,7 @@ router.get('/', function(req, res) {
 router.use(chef);
 // router.use(user);
 router.use(comments);
+router.use(recipes);
 
 // FUNCTIONS FOR TRAINEDS
 
