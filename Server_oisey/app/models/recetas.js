@@ -16,7 +16,7 @@ const recipeSchema   = new Schema({
         required:true
     },
     fotos: {
-        type: Object,
+        type: [String],
         required: true,
         unique: true
     },
