@@ -15,17 +15,11 @@ export class serviciochefs {
   constructor(private _http: HttpClient) { };
 
 
-  getChefsFromAPI(parametros): Observable<Chef[]> {
+  getChefsFromAPI(cid): Observable<Chef[]> {
     if (this._chefs) {
       return of(this._chefs);
     } else {
-      return this._http.get<Chef[]>(`${environment.API_URL}/chefs`).pipe(
-        tap(data => {
-          let theChef = data.filter(aChefObj => aChefObj._id == parametros.chefId);
-          console.log('TheChef: ', theChef);
-          return theChef;
-        })
-      );
+      return this._http.get<Chef[]>(`${environment.API_URL}/chefs/${cid}`);
     }
   };
   putValoracion(idchef, val): Observable<Chef> {
