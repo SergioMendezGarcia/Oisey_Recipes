@@ -18,8 +18,6 @@ import { LoginComponent } from './login/login.component';
 import { VeganComponent } from './vegan/vegan.component';
 import { PostreComponent } from './postre/postre.component';
 import { SoporteComponent } from './soporte/soporte.component';
-import { Cabecera2Component } from './cabecera2/cabecera2.component';
-import { CabeceraPostresComponent } from './cabecera-postres/cabecera-postres.component';
 import { ListaVeganaComponent } from './lista-vegana/lista-vegana.component';
 import { ListaPostresComponent } from './lista-postres/lista-postres.component';
 
@@ -40,8 +38,6 @@ import { ListaPostresComponent } from './lista-postres/lista-postres.component';
     VeganComponent,
     PostreComponent,
     SoporteComponent,
-    Cabecera2Component,
-    CabeceraPostresComponent,
     ListaVeganaComponent,
     ListaPostresComponent
   ],
