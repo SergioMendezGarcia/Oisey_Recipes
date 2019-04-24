@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./postre.component.scss']
 })
 export class PostreComponent implements OnInit {
+  getRecetas(): any {
+    throw new Error("Method not implemented.");
+  }
 
   constructor() { }
 

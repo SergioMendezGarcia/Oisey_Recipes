@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CabeceraPostresComponent } from './cabecera-postres.component';
+import { ListaPostresComponent } from './lista-postres.component';
 
-describe('CabeceraPostresComponent', () => {
-  let component: CabeceraPostresComponent;
-  let fixture: ComponentFixture<CabeceraPostresComponent>;
+describe('ListaPostresComponent', () => {
+  let component: ListaPostresComponent;
+  let fixture: ComponentFixture<ListaPostresComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CabeceraPostresComponent ]
+      declarations: [ ListaPostresComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CabeceraPostresComponent);
+    fixture = TestBed.createComponent(ListaPostresComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

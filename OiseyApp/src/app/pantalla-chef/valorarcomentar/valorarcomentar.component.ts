@@ -11,7 +11,7 @@ import { Chef } from 'src/app/Modelos/modeloChefs';
 export class ValorarcomentarComponent implements OnInit {
 
   @Input() chef: Chef;
- 
+  texto='';
   
   constructor(private _chefCommServ:ServicioChefCommentsService, private _chefServ:serviciochefs) { };
 
@@ -26,6 +26,9 @@ export class ValorarcomentarComponent implements OnInit {
   }
   comentar(comentario){
     console.log(comentario);
+    this._chefServ.pushComentario(this.chef._id,comentario).subscribe(datos=>{
+      console.log('data',datos)
+    })
   }
  
 }
