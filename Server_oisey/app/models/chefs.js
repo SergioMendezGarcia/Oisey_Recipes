@@ -45,7 +45,7 @@ const chefSchema   = new Schema({
         required: true
     },
     comentarios: {
-        type: [Object],
+        type: Array,
         required: false
     }
 });
