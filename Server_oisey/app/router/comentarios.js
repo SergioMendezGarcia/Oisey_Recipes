@@ -17,13 +17,15 @@ router.route('/comments')
         let comment = new Comentario();
 
         comment.titulo = req.body.titulo;
+        comment.userName = req.body.userName;
         comment.userMail = req.body.userMail;
         comment.fotoUser = req.body.fotoUser;
         comment.puntuacion = req.body.puntuacion;
-        comment.texto = req.body.texto;
+        comment.commentText = req.body.commentText;
         comment.fecha = req.body.fecha;
+        comment.chefId = req.body.chefId;
 
-        Comment.findOne({ user: comment.userMail, texto: comment.texto }).then(aCommnet => {
+        Comment.findOne({ user: comment.userMail, texto: comment.commentText }).then(aCommnet => {
             if (aCommnet) {
                 res.status(409).send({ message: 'This comment already exists' });
                 aCommnet = null;

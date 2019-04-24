@@ -12,7 +12,7 @@ const commentSchema   = new Schema({
         required: true
     },
     userMail: {
-        type: Object,
+        type: String,
         required: true
     },
     fotoUser: {
