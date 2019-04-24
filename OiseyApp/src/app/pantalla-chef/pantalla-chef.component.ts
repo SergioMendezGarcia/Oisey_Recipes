@@ -21,15 +21,11 @@ export class PantallaChefComponent implements OnInit {
 
     this._route.params.subscribe(parametros => {
       
-      parametros.chefId = '5cbf2170b81f9a0cb8fb310d';
-      this.listaChefs = this._chefServ.getChefs();
-
-      this.theChef = this.listaChefs.filter(aChefObj => aChefObj.chefId == parametros.chefId);
-
-      console.log(this.theChef);
-
-      // const comentarios=this.listaChefs[parametros.chefId].comentarios;
-
+      console.log('Parámetros: ', parametros.chefId);
+      this.listaChefs = this._chefServ.getChefsFromAPI(parametros).subscribe(data=>{
+        console.log('Chefs from API: ', this.listaChefs);
+        this.theChef = data[0];
+      });
     })
   }
 

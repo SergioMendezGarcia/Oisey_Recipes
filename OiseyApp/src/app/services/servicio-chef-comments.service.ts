@@ -3,6 +3,7 @@ import { ComentarioChef } from '../Modelos/comentario-chef';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -43,7 +44,7 @@ export class ServicioChefCommentsService {
     if (this._allChefComments) {
       return of(this._allChefComments);
     } else {
-      return this._http.get<ComentarioChef[]>('http://172.27.96.221:8080/api/comments').pipe(
+      return this._http.get<ComentarioChef[]>(`${environment.API_URL}/comments`).pipe(
         tap(data => {
           this._allChefComments = data;
         })

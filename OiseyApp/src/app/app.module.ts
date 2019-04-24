@@ -20,6 +20,7 @@ import { PostreComponent } from './postre/postre.component';
 import { SoporteComponent } from './soporte/soporte.component';
 import { Cabecera2Component } from './cabecera2/cabecera2.component';
 import { CabeceraPostresComponent } from './cabecera-postres/cabecera-postres.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CabeceraPostresComponent } from './cabecera-postres/cabecera-postres.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

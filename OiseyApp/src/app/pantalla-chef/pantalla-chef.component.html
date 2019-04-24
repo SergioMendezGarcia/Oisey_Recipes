@@ -1,12 +1,11 @@
 <article>
 
-  <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
+  <figure><img [src]="[theChef.avatar]" alt=""></figure>
   <div class="generalChef">
-  <h2>{{chefs[0].nombre}}</h2>
-  <h4>{{chefs[0].especialidad}}</h4>
+  <h2>{{theChef.nombre}}</h2>
+  <h4>{{theChef.especialidad}}</h4>
   <div>
-    <h4 class="estrellas"><app-rating [score]="chefs[0].estrellas" [forDisplay]="true"></app-rating> ~Chef en prácticas~</h4>
-    
+    <h4 class="estrellas"><app-rating [score]="theChef.estrellas[0]" [forDisplay]="true"></app-rating> ~Chef en prácticas~</h4>
   </div>
   <div class="descrip">
     <p>{{theChef.biografia}}</p>
@@ -19,7 +18,7 @@
       <div class="carousel-item active">
         <img [src]="theChef.galeria[0]" class="d-block w-100" alt="">
       </div>
-      <div *ngFor='let aImgChef of chefs[0].galeria' class="carousel-item">
+      <div *ngFor='let aImgChef of theChef.galeria' class="carousel-item">
         <img [src]="aImgChef" class="d-block w-100" alt="">
       </div>
     </div>
