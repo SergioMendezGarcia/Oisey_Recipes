@@ -16,11 +16,13 @@ export class CabeceraComponent implements OnInit {
   }
   constructor() { }
 
+  ngOnInit(){
+    if (location.href.indexOf('pedir') >= 0) {
+       this.ruta = true;
+    } 
+  }
+
   ngDoCheck() {
-    // if (location.href.indexOf('pedir') >= 0) {
-    //   this.ruta = true;
-    //   document.getElementById('logo').src = '../assets/img/ORfooter.png';
-    // }
     if (location.href.indexOf('vegan') >= 0) {
       document.getElementById('logo').src = '../assets/img/ORvegan.png';
       document.getElementById('bigHead').style.backgroundColor = '#33ff33';

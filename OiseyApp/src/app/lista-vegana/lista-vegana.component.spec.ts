@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Cabecera2Component } from './cabecera2.component';
+import { ListaVeganaComponent } from './lista-vegana.component';
 
-describe('Cabecera2Component', () => {
-  let component: Cabecera2Component;
-  let fixture: ComponentFixture<Cabecera2Component>;
+describe('ListaVeganaComponent', () => {
+  let component: ListaVeganaComponent;
+  let fixture: ComponentFixture<ListaVeganaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Cabecera2Component ]
+      declarations: [ ListaVeganaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Cabecera2Component);
+    fixture = TestBed.createComponent(ListaVeganaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
