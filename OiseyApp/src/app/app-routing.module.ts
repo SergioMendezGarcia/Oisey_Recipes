@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'postre', component: PostreComponent, pathMatch: 'full'},
   {path: 'soporte', component: SoporteComponent, pathMatch: 'full'},
   // {path: '**', redirectTo: 'chefs/5cbf2170b81f9a0cb8fb310d', pathMatch:'full'},
-  {path: '', redirectTo: 'pedir', pathMatch:'full'}
+  // {path: '', redirectTo: 'pedir', pathMatch:'full'}
 ];
 
 @NgModule({
