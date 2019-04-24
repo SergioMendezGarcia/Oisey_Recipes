@@ -36,7 +36,10 @@ export class ListaRecetasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.recetas = this._recetas.getRecetas();
+    this.recetas = this._recetas.getRecetasFromApi().subscribe(recetas=>{
+      this.recetas = recetas;
+    });
+    console.log(this.recetas);
   }
 
 }
