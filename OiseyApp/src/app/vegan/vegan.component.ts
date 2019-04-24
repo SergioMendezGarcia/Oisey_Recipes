@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vegan.component.scss']
 })
 export class VeganComponent implements OnInit {
+  getRecetas(): any {
+    throw new Error("Method not implemented.");
+  }
 
   constructor() { }
 

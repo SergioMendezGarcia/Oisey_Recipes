@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostreComponent } from '../postre/postre.component';
+import { ServicioRecetasService } from 'src/app/services/servicio-recetas.service';
 
 @Component({
   selector: 'lista-postres',
@@ -35,7 +36,7 @@ export class ListaPostresComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
+ ngOnInit() {
     this.recetas = this._recetas.getRecetas();
   }
 

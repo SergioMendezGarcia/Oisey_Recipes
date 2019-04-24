@@ -34,6 +34,7 @@ export class ListaRecetasComponent implements OnInit {
       });
     }
   }
+  
 
   ngOnInit() {
     this.recetas = this._recetas.getRecetas();

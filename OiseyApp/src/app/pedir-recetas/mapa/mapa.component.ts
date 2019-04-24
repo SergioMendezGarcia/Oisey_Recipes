@@ -7,9 +7,6 @@ import { serviciochefs } from 'src/app/services/serviciochefs.service';
   styleUrls: ['./mapa.component.scss']
 })
 
-
-
-
 export class MapaComponent implements OnInit {
 
   constructor(private _chefServ: serviciochefs) { }

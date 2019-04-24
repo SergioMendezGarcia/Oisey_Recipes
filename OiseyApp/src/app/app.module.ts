@@ -18,14 +18,9 @@ import { LoginComponent } from './login/login.component';
 import { VeganComponent } from './vegan/vegan.component';
 import { PostreComponent } from './postre/postre.component';
 import { SoporteComponent } from './soporte/soporte.component';
-<<<<<<< HEAD
 import { ListaVeganaComponent } from './lista-vegana/lista-vegana.component';
 import { ListaPostresComponent } from './lista-postres/lista-postres.component';
-=======
-import { Cabecera2Component } from './cabecera2/cabecera2.component';
-import { CabeceraPostresComponent } from './cabecera-postres/cabecera-postres.component';
 import { HttpClientModule } from '@angular/common/http';
->>>>>>> 49d315c25db8c95ba8d524f2dc09ef8264324a77
 
 @NgModule({
   declarations: [
