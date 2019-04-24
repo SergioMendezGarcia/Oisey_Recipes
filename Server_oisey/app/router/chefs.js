@@ -53,6 +53,46 @@ router.route('/chefs')
 
     });
 
+    // .put(function (req, res) {
+    //     let chef = new Chef();
+
+    //     chef.nombre = req.body.nombre;
+    //     chef.mail = req.body.mail;
+    //     chef.password = req.body.password;
+    //     chef.avatar = req.body.avatar;
+    //     chef.especialidad = req.body.especialidad;
+    //     chef.estrellas = req.body.estrellas;
+    //     chef.biografia = req.body.biografia;
+    //     chef.galeria = req.body.galeria;
+    //     chef.localizacion = req.body.localizacion;
+    //     chef.ciudad = req.body.ciudad;
+    //     chef.comentarios = req.body.comentarios;
+
+    //     Chef.findOne({ chefId: chef.chefId }).then(aChef => {
+    //         if (aChef) {
+    //             res.status(409).send({ message: 'This mail already exists' });
+    //             aChef = null;
+    //         } else { aChef = chef; }
+
+    //         return aChef;
+    //     }).then(aChef => {
+    //         if (aChef) aChef.save();
+
+    //         return aChef;
+    //     }).then(savedChef => {
+    //         console.log('savedChef:', savedChef);
+
+    //         if (savedChef) {
+    //             res.json(savedChef);
+    //         }
+    //     }).catch(err => {
+    //         console.log('Error saving new Chef:', err);
+    //         res.status(500).send({ message: 'Server error' });
+    //     });
+
+
+    // });
+
     router.route('/chef/:cid')
         .get(function(req, res){
             //res.json({data: 'hola:' + req.params.pid});
