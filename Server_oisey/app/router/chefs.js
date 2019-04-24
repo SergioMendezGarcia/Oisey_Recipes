@@ -52,7 +52,6 @@ router.route('/chefs')
 
 
     });
-
     // .put(function (req, res) {
     //     let chef = new Chef();
 
@@ -68,7 +67,7 @@ router.route('/chefs')
     //     chef.ciudad = req.body.ciudad;
     //     chef.comentarios = req.body.comentarios;
 
-    //     Chef.findOne({ chefId: chef.chefId }).then(aChef => {
+    //     Chef.findOne({ chefComment: chef.chefComment }).then(aChef => {
     //         if (aChef) {
     //             res.status(409).send({ message: 'This mail already exists' });
     //             aChef = null;
@@ -93,10 +92,12 @@ router.route('/chefs')
 
     // });
 
-    router.route('/chef/:cid')
+    router.route('/chefs/:cid')
         .get(function(req, res){
             //res.json({data: 'hola:' + req.params.pid});
-            Chefs.findById(req.params.pid).then(aChef=>{
+
+            console.log('cid:',req.params.cid)
+            Chef.findById(req.params.cid).then(aChef=>{
                 res.json(aChef);
             }).catch(err => {
                 console.log('error:', err);

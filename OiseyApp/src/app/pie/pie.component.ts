@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PieComponent implements OnInit {
 
+  src='../assets/img/ORfooter.png';
   constructor() { }
 
   ngOnInit() {
@@ -14,12 +15,11 @@ export class PieComponent implements OnInit {
 
   ngDoCheck() {
     if (location.href.indexOf('vegan') >= 0) {
-      document.getElementById('footer').src = '../assets/img/ORvegan.png';
-     }else if (location.href.indexOf('postre') >= 0) {
-      document.getElementById('footer').src = '../assets/img/ORpostre.png';
-  }else{
-      document.getElementById('footer').src = '../assets/img/ORfooter.png';
-      // document.getElementById('bigHead').style.backgroundColor = '';
+      this.src='../assets/img/ORvegan.png';
+    }else if (location.href.indexOf('postre') >= 0) {
+      this.src= '../assets/img/ORpostre.png';
+    }else{
+      this.src= '../assets/img/ORfooter.png';
     }
 
 }

@@ -50,36 +50,11 @@ export class ServicioChefCommentsService {
         })
       );
     }
-  }
-                                    //Método para recuperar los comentarios filtrando por id
-                                    //del comentario.
-                                    //El método recibe como párametro el array con la lista
-                                    //completa de comentarios del chef.
+  };
+
   getComments(comentariosChefs) {
-                                    //Declaración variable en la que se almacenarán los comentarios
-                                    //ya filtrados.
 
-    var comentarios: ComentarioChef[] = [];
-
-                                    //Bucle doble for con filtrar los comentarios del chef deseado
-                                    //usando el id asignado a cada comentario, presente tanto en
-                                    //el objeto comentario como en el objeto chef.
-
-
-    for (let unComChef of comentariosChefs) {
-
-                                    //Almacenamos el resultado filtrado en una variable para su posterior uso
-                                    //con el método concatenar.
-                                    
-      const losComentarios = this._allChefComments.filter(unComentObj => unComChef == unComentObj.commentId);
-
-                                    //Imprescindible guardar la concatenación con los comentarios en la variable
-                                    //comentarios, sino el último resultado sobrescribirá al resto.
-
-      comentarios=comentarios.concat(losComentarios);
-    }
-
-    return comentarios;
+    return comentariosChefs;
 
   };
 }

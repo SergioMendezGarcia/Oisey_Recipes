@@ -15,6 +15,7 @@ export class PantallaChefComponent implements OnInit {
   theChef: Chef = null;
   estrellas = null;
   media = null;
+  
   constructor(private _route: ActivatedRoute, private _chefServ: serviciochefs) { }
 
   ngOnInit() {
@@ -24,12 +25,10 @@ export class PantallaChefComponent implements OnInit {
     this._route.params.subscribe(parametros => {
       
 
-        this.listaChefs = this._chefServ.getChefsFromAPI(parametros).subscribe(data=>{
-    
-        this.theChef = data[0];
+        this.listaChefs = this._chefServ.getChefsFromAPI(parametros.chefId).subscribe(data=>{
+        this.theChef = data;
         this.estrellas = this.theChef.estrellas;
         this.calcularMedia(this.estrellas);
-
       });
     });
     
