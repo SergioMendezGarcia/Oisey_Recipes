@@ -22,8 +22,8 @@ export class serviciochefs {
       return this._http.get<Chef[]>(`${environment.API_URL}/chefs`).pipe(
         tap(data => {
           let theChef = data.filter(aChefObj => aChefObj._id == parametros.chefId);
-        console.log('theChef: ', theChef);
-          this._chefs = data;
+          console.log('TheChef: ', theChef);
+          return theChef;
         })
       );
     }
