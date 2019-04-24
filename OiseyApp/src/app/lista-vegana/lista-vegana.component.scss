@@ -8,10 +8,10 @@ select{
    }
    
    .container{
-       border: 2px solid #666;
+       border: 2px solid #7fc7dd;
        border-radius: 5px;
        overflow: auto;
-       height: 20vh;
+       height: 35vh;
    }
    
    ::-webkit-scrollbar {
@@ -28,12 +28,28 @@ select{
    }
    
    .row{
-       border-bottom: 1px solid #000;
+       border-bottom: 1px solid #00c6Fc;
        padding: 1%;
    }
    
    img{
        width: 10vw;
+       border-radius: 10px;
+   }
+   
+   span{
+       font-weight: bolder;
+       font-size: 1.3vw;
+   }
+   
+   li:first-of-type{
+       position: sticky;
+       top: 0;
+       z-index: 4;
+       font-weight: bold;
+       font-size: 0.7vw;
+       background-color: #00E7FF;
+       color: #fff;
    }
    
    @media screen and (max-width: 450px){
