@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Receta } from '../Modelos/receta';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class ServicioRecetasService {
     if (this._recetas) {
       return of(this._recetas);
     } else {
-      return this._http.get<Receta[]>('http://172.27.96.221:8080/api/recipes').pipe(
+      return this._http.get<Receta[]>(`${environment.API_URL}/recipes`).pipe(
         tap(data => {
           this._recetas = data;
         })

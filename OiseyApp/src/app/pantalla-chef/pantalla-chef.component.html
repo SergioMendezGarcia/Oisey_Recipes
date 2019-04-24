@@ -1,12 +1,11 @@
 <article>
 
-  <figure><img [src]="[chefs[0].avatar]" alt=""></figure>
+  <figure><img [src]="[theChef.avatar]" alt=""></figure>
   <div class="generalChef">
   <h2>{{theChef.nombre}}</h2>
   <h4>{{theChef.especialidad}}</h4>
   <div>
-    <h4 class="estrellas"><app-rating [score]="chefs[0].estrellas" [forDisplay]="true"></app-rating> ~Chef en prácticas~</h4>
-    
+    <h4 class="estrellas"><app-rating [score]="theChef.estrellas[0]" [forDisplay]="true"></app-rating> ~Chef en prácticas~</h4>
   </div>
   <div class="descrip">
     <p>{{theChef.biografia}}</p>

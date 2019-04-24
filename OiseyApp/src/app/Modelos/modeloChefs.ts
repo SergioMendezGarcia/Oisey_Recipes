@@ -1,6 +1,6 @@
 export class Chef {
     constructor(
-        public chefId: any,
+        public _id: any,
         public nombre: string,
         public mail: string, 
         public password: string,
