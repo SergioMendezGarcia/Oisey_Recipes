@@ -23,8 +23,7 @@ export class ValorarcomentarComponent implements OnInit {
   }
 
   puntuar(puntuacion){
-    console.log(puntuacion);
-    /* this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
+      /* this._chefServ.putValoracion(this.chef._id, puntuacion).subscribe(data=>{
       console.log('data:',data);
     
     })  */ 
@@ -34,8 +33,8 @@ export class ValorarcomentarComponent implements OnInit {
   
   comentar(){
     console.log('puntuacion: ', this.puntuacion, 'comentario: ', this.texto);
-    this._chefServ.putCommentRating(this.chef._id,this.texto,this.puntuacion).subscribe(datos=>{
-      console.log('data',datos)
+    this._chefServ.putCommentRating(this.chef._id,this.texto,this.puntuacion).subscribe(data=>{
+    return data;
     });
 
        
