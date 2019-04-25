@@ -28,7 +28,7 @@
     border-right:4px solid #0063cf;
     transition:all .5s ease; /*Damos a la caja del menú una transición para que tenga un desplazamiento suave*/
     padding-bottom: 100vh;
-    z-index: 1;
+    z-index: 5;
   }
      /*Estilos de los li del menú*/
      .nav__item {
