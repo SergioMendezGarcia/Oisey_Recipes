@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent, pathMatch: 'full'},
   {path: 'chefs', component: PantallaChefComponent, pathMatch: 'full'},
   {path: 'chefs/:chefId', component: PantallaChefComponent, pathMatch: 'full'},
+  {path: 'chefs/5cbf2170b81f9a0cb8fb310d', component: PantallaChefComponent, pathMatch: 'full'},
   {path: 'pedir', component: PedirRecetasComponent, pathMatch: 'full'},
   {path: 'vegan', component: VeganComponent, pathMatch: 'full'},
   {path: 'postre', component: PostreComponent, pathMatch: 'full'},

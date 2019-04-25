@@ -66,36 +66,36 @@ router.route('/chefs')
             });
         });
 
-    // router.route('/chefs/:cid')
-    //     .put(function(req, res) {
-    //         if(!req.body) {
-    //             return res.status(400).send({
-    //                 message: "Product content can not be empty"
-    //             });
-    //         }
-    //         Chef.findByIdAndUpdate(req.params.cid, {
-    //             nombre : req.body.nombre,
-    //             mail : req.body.mail,
-    //             password : req.body.password,
-    //             avatar : req.body.avatar,
-    //             especialidad : req.body.especialidad,
-    //             estrellas : req.body.estrellas,
-    //             biografia : req.body.biografia,
-    //             galeria : req.body.galeria,
-    //             localizacion : req.body.localizacion,
-    //             ciudad : req.body.ciudad,
-    //             comentarios : req.body.comentarios
-    //         }, {new: true}).then(comment => {
-    //             if(!comment) {
-    //                 return res.status(404).send({
-    //                     message: "Chef not found with id " + req.params.cid
-    //                 });
-    //         }
-    //         return res.status(500).send({
-    //             message: "Something wrong updating the comments in the chef with id " + req.params.cid
-    //         });
-    //     });
-    // });
+    router.route('/chefs/:cid')
+        .put(function(req, res) {
+            if(!req.body) {
+                return res.status(400).send({
+                    message: "Product content can not be empty"
+                });
+            }
+            Chef.findByIdAndUpdate(req.params.cid, {
+                nombre : req.body.nombre,
+                mail : req.body.mail,
+                password : req.body.password,
+                avatar : req.body.avatar,
+                especialidad : req.body.especialidad,
+                estrellas : req.body.estrellas,
+                biografia : req.body.biografia,
+                galeria : req.body.galeria,
+                localizacion : req.body.localizacion,
+                ciudad : req.body.ciudad,
+                comentarios : req.body.comentarios
+            }, {new: true}).then(comment => {
+                if(!comment) {
+                    return res.status(404).send({
+                        message: "Chef not found with id " + req.params.cid
+                    });
+            }
+            return res.status(500).send({
+                message: "Something wrong updating the comments in the chef with id " + req.params.cid
+            });
+        });
+    });
             
 
 module.exports = router;

@@ -7,10 +7,10 @@ curl -X POST http://35.157.179.127:8080/api/chefs -d "{\"nombre\":\"josetxo\", \
 
 RECIPES
 
-curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Huevos con patatas\", \"ingr\":\"Huevos, aceite, patatas\", \"tiempo\":25,\"fotos\":[\"https://bit.ly/2P6IIAu\", \"patatas.jpg\"], \"rating\":5, \"chefId\":INSERTE ID DE CHEF AQUI(NO EN SERIO NO SEAS GILIPOLLAS SERGIO)}" -H "Content-type: application/json"
+curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Huevos con patatas\", \"ingr\":\"Huevos, aceite, patatas\", \"tiempo\":25,\"fotos\":[\"https://bit.ly/2P6IIAu\", \"patatas.jpg\"], \"rating\":5, \"chefId\":\"5cc15ba27445ca2d14705b88\"}" -H "Content-type: application/json"
 
-curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Fabada asturiana\", \"ingr\":\"Fabes, Compango, Agua, Sal\", \"tiempo\":65,\"fotos\":[\"https://bit.ly/2v1he6f\"], \"rating\":5, \"chefId\":INSERTE ID DE CHEF AQUI(NO EN SERIO NO SEAS GILIPOLLAS SERGIO)}" -H "Content-type: application/json"
+curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Fabada asturiana\", \"ingr\":\"Fabes, Compango, Agua, Sal\", \"tiempo\":65,\"fotos\":[\"https://bit.ly/2v1he6f\"], \"rating\":5, \"chefId\":\"5cc15ba27445ca2d14705b88\"}" -H "Content-type: application/json"
 
-curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Kebab de Burgos\", \"ingr\":\"Carne falsa, lechuga, salsa rara, cebolla\", \"tiempo\":15,\"fotos\":[\"https://bit.ly/2G6RI4t\", \"kebab.jpg\"], \"rating\":2, \"chefId\":INSERTE ID DE CHEF AQUI(NO EN SERIO NO SEAS GILIPOLLAS SERGIO)}" -H "Content-type: application/json"
+curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Kebab de Burgos\", \"ingr\":\"Carne falsa, lechuga, salsa rara, cebolla\", \"tiempo\":15,\"fotos\":[\"https://bit.ly/2G6RI4t\", \"kebab.jpg\"], \"rating\":2, \"chefId\":\"5cc15ba27445ca2d14705b88\"}" -H "Content-type: application/json"
 
-curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Arroz tres delicias\", \"ingr\":\"Huevos, aceite de mala calidad, lechuga, zanahoria, dicen que es jamón cocido\", \"tiempo\":10,\"fotos\":[\"https://bit.ly/2UdUIB9\", \"alozchino.jpg\"], \"rating\":2.5, \"chefId\":INSERTE ID DE CHEF AQUI(NO EN SERIO NO SEAS GILIPOLLAS SERGIO)}" -H "Content-type: application/json"
+curl -X POST http://35.157.179.127:8080/api/recipes -d "{\"nombre\":\"Arroz tres delicias\", \"ingr\":\"Huevos, aceite de mala calidad, lechuga, zanahoria, dicen que es jamón cocido\", \"tiempo\":10,\"fotos\":[\"https://bit.ly/2UdUIB9\", \"alozchino.jpg\"], \"rating\":2.5, \"chefId\":\"5cc15ba27445ca2d14705b88\"}" -H "Content-type: application/json"
