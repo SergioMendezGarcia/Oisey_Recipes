@@ -68,6 +68,7 @@ router.route('/chefs')
 
     router.route('/chefs/:cid')
         .put(function(req, res) {
+            console.log('reqbody:', req.body);
             if(!req.body) {
                 return res.status(400).send({
                     message: "Comment content can not be empty"
