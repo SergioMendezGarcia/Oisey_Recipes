@@ -24,9 +24,10 @@ export class PantallaChefComponent implements OnInit {
     // this.listaComments = this._chefCommServ.getComments(this.listaChefs[this.chefId].comentarios);
 
     this._route.params.subscribe(parametros => {
-      parametros.chefId = "5cbf2170b81f9a0cb8fb310d";
+      var id = parametros.chefId;
+      id = "5cbf2170b81f9a0cb8fb310d";
 
-        this.listaChefs = this._chefServ.getChefsFromAPI(parametros.chefId).subscribe(data=>{
+        this.listaChefs = this._chefServ.getChefsFromAPI(id).subscribe(data=>{
         this.theChef = data;
         this.estrellas = this.theChef.estrellas;
         this.calcularMedia(this.estrellas);
