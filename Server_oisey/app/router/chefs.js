@@ -80,6 +80,7 @@ router.route('/chefs')
                 }
                 return unChef
             }).then(unChef=>{
+                console.log('unChef:', unChef);
                 if(unChef) {
                     unChef.markModified('cometarios');
                     unChef.save();
