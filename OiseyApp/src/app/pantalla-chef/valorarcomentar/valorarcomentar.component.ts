@@ -32,7 +32,6 @@ export class ValorarcomentarComponent implements OnInit {
   }
   
   comentar(){
-    console.log('puntuacion: ', this.puntuacion, 'comentario: ', this.texto);
     this._chefServ.putCommentRating(this.chef._id,this.texto,this.puntuacion).subscribe(data=>{
     return data;
     });
