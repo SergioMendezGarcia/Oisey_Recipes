@@ -64,9 +64,7 @@ router.route('/chefs')
                 console.log('error:', err);
                 res.status(500).send({ message: 'Server error'});
             });
-        });
-
-    router.route('/chefs/:cid')
+        })
         .put(function(req, res) {
             console.log('reqbody:', req.body);
             if(!req.body) {
