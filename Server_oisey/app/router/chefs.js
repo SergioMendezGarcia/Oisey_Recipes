@@ -82,6 +82,7 @@ router.route('/chefs')
                 console.log('unChef:', unChef);
                 if(unChef) {
                     unChef.markModified('comentarios');
+                    unChef.markModified('estrellas');
                     unChef.save();
                 }
                 return unChef
