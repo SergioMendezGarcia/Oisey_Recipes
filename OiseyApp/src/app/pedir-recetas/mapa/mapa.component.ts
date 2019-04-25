@@ -82,7 +82,7 @@ export class MapaComponent implements OnInit {
     
     boton.appendChild( link = document.createElement("a"));
     boton.id = "boton";
-    link.href="/chefs/5cc16cd910989e3048ef88bd";
+    link.href="/#/chefs/5cc16cd910989e3048ef88bd";
     link.textContent = "Haz tu pedido";
     link.style.color =  "white";
     link.style.marginLeft = "9%";
