@@ -5,19 +5,19 @@ const Schema       = mongoose.Schema;
 const commentSchema   = new Schema({
     titulo: {
         type: String,
-        required: true
+        required: false
     },
     userName: {
         type:String,
-        required: true
+        required: false
     },
     userMail: {
         type: String,
-        required: true
+        required: false
     },
     fotoUser: {
         type: String,
-        required:true
+        required:false
     },
     puntuacion: {
         type: Number,
@@ -29,11 +29,11 @@ const commentSchema   = new Schema({
     },
     fecha: {
         type: String,
-        required: true
+        required: false
     },
     chefId: {
         type:String,
-        required: true
+        required: false
     }
 });
 
