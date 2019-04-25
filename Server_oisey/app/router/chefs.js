@@ -74,8 +74,8 @@ router.route('/chefs/:cid')
         }
         Chef.findById(req.params.cid).then(unChef => {
             if (unChef) {
-                unChef.comentarios=[...unChef.comentarios,{ commentText: req.body.comentario }];
-                unChef.estrellas=[...unChef.estrellasreq.body.estrellas];
+                unChef.comentarios.push({ commentText: req.body.comentario });
+                unChef.estrellas.push(req.body.estrellas);
                 unChef.markModified('comentarios');
                 unChef.markModified('estrellas');
             }
