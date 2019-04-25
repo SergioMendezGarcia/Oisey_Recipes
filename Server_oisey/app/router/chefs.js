@@ -76,15 +76,17 @@ router.route('/chefs')
                 if(unChef){
                     unChef.comentarios.push({commentText:req.body.comentario});
                     unChef.estrellas.push(req.body.estrellas);
+                    unChef.markModified('comentarios');
+                    unChef.markModified('estrellas');
                 }
                 return unChef
             }).then(unChef=>{
-                console.log('unChef:', unChef);
-                if(unChef) {
-                    unChef.markModified('comentarios');
-                    unChef.markModified('estrellas');
+                if(unChef) {                    
                     unChef.save();
                 }
+
+                console.log('unChef saved:', unChef);
+
                 return unChef
             }).then(savedChef=>{
                 if (savedChef) {
